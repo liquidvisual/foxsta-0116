@@ -1,0 +1,46 @@
+/*
+    OFF-CANVAS.CSS
+
+    - Last updated: 20.10.2015
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Off Canvas
+//-----------------------------------------------------------------
+
+.off-canvas-menu {
+	.mm-subtitle,
+	.top-parent-anchor {
+		text-transform: uppercase;
+	}
+}
+
+.off-canvas-menu .contact-info {
+	padding: rem-calc(30 20);
+	text-transform: none;
+	font-size: rem-calc(16);
+
+	h4 {
+		font-size: rem-calc(14);
+		color: white;
+	}
+
+	.social-media {
+		display: block;
+		margin-bottom: rem-calc(30);
+
+		a {
+			width: rem-calc(40);
+			height: rem-calc(40);
+			line-height: rem-calc(40);
+			margin-right: rem-calc(5);
+		}
+	}
+}
+
+//=========================================
+//
+//=========================================

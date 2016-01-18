@@ -1,0 +1,83 @@
+/*
+    HEADER-ICONS.CSS
+
+    - Last updated: 16.01.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Circular Round Buttons
+//
+// They live in the global nav and off canvas menu
+// but appear in the header on desktop
+//-----------------------------------------------------------------
+
+.contact-info {
+	@include media-breakpoint-up(lg) {
+	    position: absolute;
+	    top: rem-calc(15);
+	    left: 0;
+	    width: 100%;
+
+	    .phone-wrapper,
+	    .search-wrapper {
+	    	position: absolute;
+	    }
+
+	    .phone-wrapper {
+	    	right: rem-calc(15);
+
+	    	a {
+	    		color: $dark-text-color;
+	    		font-size: rem-calc(16);
+	    		// font-weight: normal;
+	    	}
+	    }
+
+	    .search-wrapper {
+	    	left: rem-calc(15);
+	    	width: 50%;
+	    }
+	}
+}
+
+//-----------------------------------------------------------------
+// Offcanvas Hit
+//-----------------------------------------------------------------
+
+.contact-info a {
+	font-size: rem-calc(18);
+}
+
+//-----------------------------------------------------------------
+// Icons
+//-----------------------------------------------------------------
+
+.contact-info .fa {
+	margin-right: 8px;
+	margin-bottom: 15px;
+    width: 26px;
+    height: 26px;
+    font-size: rem-calc(16);
+    line-height: 26px;
+    text-align: center;
+    border-radius: 100%;
+    background: #CFCFCF;
+    float: left;
+}
+
+.off-canvas-menu .contact-info .fa {
+	background: darken($primary-color, 6%);
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+
+
+//=========================================
+//
+//=========================================

@@ -1,0 +1,74 @@
+/*
+    TEXT-EDITOR.CSS
+
+    - Last updated: 20.04.15
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Text Editor Classes
+//-----------------------------------------------------------------
+
+.image-right {
+	@include media-breakpoint-up(lg) {
+	    float: right;
+	    margin: rem-calc(0 0 30 30);
+	}
+}
+
+.image-left {
+	@include media-breakpoint-up(lg) {
+	    float: left;
+	    margin: rem-calc(30 30 0 0);
+	}
+}
+
+//-----------------------------------------------------------------
+// Document Button
+//-----------------------------------------------------------------
+
+.btn-document a,
+.document-link a {
+	@extend .btn;
+	@extend .btn-primary;
+	@extend .btn-text;
+
+	position: relative;
+	text-align: left;
+	margin-bottom: rem-calc(5);
+	width: 100%;
+	padding-left: 36px;
+	padding-right: 40px;
+	overflow: hidden;
+	color: white !important; // override theme
+
+	&:before,
+	&:after {
+	    position: absolute;
+	    font-family: 'FontAwesome';
+	}
+
+	&:before {
+	    content: "\f15b";
+	    top: 9px;
+	    left: 15px;
+	    font-size: rem-calc(16);
+	}
+
+	&:after {
+	    content: "\f105";
+	    top: 3px;
+	    right: 10px;
+	    font-size: rem-calc(24);
+	    color: rgba(white, 0.6); // same as btn
+	}
+
+	&:hover:after {
+		@include media-breakpoint-up(xl) {
+		    color: white;
+		}
+	}
+}
+
+//=========================================
+//
+//=========================================

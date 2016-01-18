@@ -1,0 +1,78 @@
+/*
+    SPECIAL.CSS
+
+    - Last updated: 00.00.00
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Special
+//-----------------------------------------------------------------
+
+.primary-color {
+    color: $primary-color; // need this?
+}
+
+.hero-spacer {
+	margin-bottom: rem-calc(40);
+
+	@include media-breakpoint-up(xl) {
+	    margin-bottom: rem-calc(75);
+	}
+}
+
+//-----------------------------------------------------------------
+// Special
+//-----------------------------------------------------------------
+
+// Used on sidebars
+.pad-left-xl {
+	@include media-breakpoint-up(xl) {
+	    padding-left: rem-calc(65);
+	}
+}
+
+// Used on homepage only
+.pad-right-xl {
+	@include media-breakpoint-up(xl) {
+	    padding-right: rem-calc(65);
+	}
+}
+
+//-----------------------------------------------------------------
+// Special
+//-----------------------------------------------------------------
+
+.club-table {
+	border-bottom: 1px solid #E0E0E2;
+
+	a {
+		color: $senary-color !important;
+
+		&:hover {
+			color: darken($senary-color, 10%) !important; // redundant after type?
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// Special
+//-----------------------------------------------------------------
+
+.inline {
+	display: inline !important;
+}
+
+.table thead {
+	background: #E9E9EA;
+	color: darken($body-color, 20%);
+}
+
+//=========================================
+//
+//=========================================
+
+
+

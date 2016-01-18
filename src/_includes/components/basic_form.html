@@ -1,0 +1,102 @@
+<div class="m-b-md card color-card card-inverse card-senary">
+    <div class="card-block clearfix">
+        <h3 class="card-title"><i class="fa fa-credit-card"></i>&nbsp; Enter your payment details</h3>
+
+		<form data-toggle="validator">
+
+			<!-- NAME -->
+			<fieldset class="form-group">
+				<label for="name">Name</label>
+				<input class="form-control" id="name" type="text" placeholder="Your name" required>
+				<small class="error">Your name is required.</small>
+			</fieldset>
+
+			<!-- EMAIL -->
+			<fieldset class="form-group">
+				<label for="email">Email address</label>
+				<input class="form-control" id="email" type="email" placeholder="Enter email" required>
+				<small class="error">A valid email is required.</small>
+				<small class="text-muted">We'll never share your email with anyone else.</small>
+			</fieldset>
+
+			<!-- PASSWORD -->
+			<fieldset class="form-group">
+				<label for="password">Password</label>
+				<input class="form-control" id="password" type="password" placeholder="Password">
+			</fieldset>
+
+			<!-- AMOUNT -->
+			<fieldset class="form-group">
+				<label for="amount">Amount (AUD)</label>
+					<div class="input-group">
+						<div class="input-group-addon">$</div>
+							<input type="number" class="form-control" id="amount" placeholder="Amount">
+						<div class="input-group-addon">.00</div>
+					</div>
+					<small class="error">Must be numerical.</small>
+			</fieldset>
+
+			<!-- SELECT -->
+			<fieldset class="form-group">
+				<label for="example-select">Example select</label>
+				<select class="form-control" id="example-select">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+				<small class="error">There was an error.</small>
+			</fieldset>
+
+			<!-- TEXT AREA -->
+			<fieldset class="form-group">
+				<label for="message">Example textarea</label>
+				<textarea class="form-control" id="message" rows="3" required></textarea>
+				<small class="error">A message is required.</small>
+			</fieldset>
+
+			<!-- FILE INPUT -->
+			<fieldset class="form-group">
+				<label for="file-input">File input</label>
+				<input type="file" class="form-control-file" id="file-input">
+				<small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+			</fieldset>
+
+			<!-- RADIO -->
+			<div class="radio">
+				<label>
+					<input type="radio" name="radio-group-1" value="Option 1" checked>
+					Option one is this and that&mdash;be sure to include why it's great
+				</label>
+			</div>
+
+			<!-- RADIO -->
+			<div class="radio">
+				<label>
+					<input type="radio" name="radio-group-1" value="Option 2">
+					Option two can be something else and selecting it will deselect option one
+				</label>
+			</div>
+
+			<!-- RADIO DISABLED -->
+			<div class="radio disabled">
+				<label>
+					<input type="radio" name="radio-group-1" value="Option 3" disabled>
+					Option three is disabled
+				</label>
+			</div>
+
+			<!-- CHECKBOX -->
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Check me out
+				</label>
+			</div>
+
+			<!-- SUBMIT -->
+			<button type="submit" class="btn btn-primary btn-text">Submit Payment <i class="fa fa-angle-right"></i></button>
+
+		</form>
+    </div>
+</div>

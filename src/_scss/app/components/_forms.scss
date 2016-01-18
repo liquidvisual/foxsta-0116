@@ -1,0 +1,93 @@
+/*
+    FORMS.CSS
+
+    - Last updated: 07.01.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Forms
+//-----------------------------------------------------------------
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+	-webkit-appearance: none; // removes shadow
+}
+
+//-----------------------------------------------------------------
+// Validation
+//-----------------------------------------------------------------
+
+.error {
+	display: none;
+	background: $brand-danger;
+	width: 100%;
+	color: white;
+	padding: rem-calc(5 10);
+}
+
+.has-error > .error {
+	display: block;
+}
+
+//-----------------------------------------------------------------
+// Search Form General
+//-----------------------------------------------------------------
+
+.search-form {
+	position: relative;
+	top: -4px;
+	float: left;
+
+    input {
+    	width: 180px;
+    	padding-left: 0;
+        border: 0;
+        background: transparent;
+
+        @include media-breakpoint-up(md) {
+            width: 340px;
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+// Search Form Header
+//-----------------------------------------------------------------
+
+.global-header .search-form {
+
+	::-webkit-input-placeholder { color: $dark-text-color; opacity: 1; }
+	:-ms-input-placeholder { color: white; opacity: 1; }
+	::-moz-placeholder { color: white; opacity: 1; }
+	:-moz-placeholder { color: white; opacity: 1; }
+
+	input {
+		font-size: rem-calc(16);
+		// font-weight: 600;
+	}
+}
+
+//-----------------------------------------------------------------
+// Search Form Off Canvas
+//-----------------------------------------------------------------
+
+.off-canvas-menu .search-form {
+	::-webkit-input-placeholder { color: white; opacity: 1; }
+	:-ms-input-placeholder { color: white; opacity: 1; }
+	::-moz-placeholder { color: white; opacity: 1; }
+	:-moz-placeholder { color: white; opacity: 1; }
+
+	input {
+		color: white;
+		font-size: rem-calc(18);
+	}
+}
+
+//=========================================
+//
+//=========================================

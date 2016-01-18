@@ -1,0 +1,30 @@
+---
+layout: internal
+---
+
+{% assign sections = site.data.sitemap[1].children[5].children %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6">
+
+			<div class="m-b-lg">
+				{{ content }}
+			</div>
+
+		</div>
+		<div class="col-lg-6 pad-left-xl">
+
+			<ul class="block-grid-xs-1 block-grid-md-2">
+				{% for item in sections | limit: 4 %}
+					<li class="col-md-4 col-lg-4">
+						{% include components/card_minimal.html %}
+					</li>
+				{% endfor %}
+			</ul>
+
+			<div class="spacer m-b hidden-md-up"></div>
+
+		</div>
+	</div>
+</div>

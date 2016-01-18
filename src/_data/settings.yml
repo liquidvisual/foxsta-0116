@@ -1,0 +1,40 @@
+# ---------------------
+# GLOBAL SITE SETTINGS
+# ---------------------
+
+cname: foxstaniland.yourwebvisual.com
+
+# META
+title: "Fox & Staniland"
+seo_title: ""
+company: "Fox & Staniland"
+description: ""
+
+# CONTACT
+email: lawyers@foxstaniland.com.au
+phone: (02) 9440 1202
+fax: (02) 9440 1205
+abn: 13 168 867 927
+
+# OFFICES
+offices:
+  - title: Our Office
+    address: "Level 1, 4-10 Bridge Street<br> Pymble NSW 2073"
+    phone: (02) 9440 1202
+    fax: (02) 9440 1205
+
+# SOCIAL MEDIA
+facebook: "https://www.facebook.com/foxstaniland"
+linked_in: ""
+google_plus: ""
+
+# GOOGLE
+google_map: ""
+google_analytics: "UA-XXXXXXXX-X"
+
+# AUTHOR
+author:
+  title: Much Media
+  url: http://www.muchmedia.com.au
+  logo: /img/template/much-media-logo.svg
+  description: Website by Much Media

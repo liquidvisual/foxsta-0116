@@ -1,0 +1,40 @@
+# ---------------------
+# GLOBAL SITE SETTINGS
+# ---------------------
+
+cname: DOMAIN.yourwebvisual.com
+
+# META
+title: ""
+seo_title: ""
+company: ""
+description: ""
+
+# CONTACT
+email: test@example.com
+phone: (05) 555 555
+fax: (05) 555 555
+abn: 13 168 867 927
+
+# OFFICES
+offices:
+  - title: Melbourne
+    address: "Level 5<br> 55 Placeholder Avenue<br> Melbourne Victoria 3000"
+    phone: 05 5555 5555
+    fax: 05 5555 5555
+
+# SOCIAL MEDIA
+facebook: ""
+linked_in: ""
+google_plus: ""
+
+# GOOGLE
+google_map: ""
+google_analytics: "UA-XXXXXXXX-X"
+
+# AUTHOR
+author:
+  title: Much Media
+  url: http://www.muchmedia.com.au
+  logo: /img/template/much-media-logo.svg
+  description: Website by Much Media

@@ -1,0 +1,35 @@
+- title: Home
+  url: /
+
+- title: About
+  url: /about/
+
+- title: Our People
+  url: /our-people/
+
+- title: Our Expertise
+  url: /our-expertise/
+  include_children_in_nav: true
+  children:
+    - title: Commercial & Business Law
+      url: /services/
+    - title: Family Law & Defacto Relationships
+      url: /services/
+    - title: Litigation
+      url: /services/
+    - title: Property Law & Conveyancing
+      url: /services/
+    - title: Wills, Deceased Estates & Estate Planning
+      url: /services/
+    - title: Estate Disputes
+      url: /services/
+
+
+- title: Free Seminars
+  url: /free-seminars/
+
+- title: Blog
+  url: /blog/
+
+- title: Contact
+  url: /contact/

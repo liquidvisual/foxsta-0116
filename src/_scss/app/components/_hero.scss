@@ -1,0 +1,107 @@
+/*
+    HERO.CSS
+
+    - Last updated: 29.10.15
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Hero
+//-----------------------------------------------------------------
+
+//-----------------------------------------------------------------
+// Hero Caption
+//-----------------------------------------------------------------
+
+.lv-hero-item-caption  {
+	width: 100%;
+	background: $primary-color;
+	color: white;
+	padding: rem-calc(30 50 30 30);
+	margin: rem-calc(170 0 30 0);
+
+	@include media-breakpoint-up(lg) {
+	    margin: rem-calc(0 0 70 0);
+	    padding: rem-calc(60 50 30 30);
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-size: rem-calc(17);
+		color: white;
+
+		@include media-breakpoint-up(lg) {
+		    font-size: rem-calc(23);
+		}
+	}
+
+	p {
+		font-size: rem-calc(13);
+		margin-bottom: 0;
+	}
+
+	.btn {
+		position: absolute;
+		top: rem-calc(40);
+		right: rem-calc(5);
+		color: rgba(white, 0.5);
+		font-size: rem-calc(50);
+
+		&:after {
+			display: none; // override btn
+		}
+	}
+
+	&:hover .btn {
+		@include media-breakpoint-up(xl) {
+		    color: white;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// Hero Controls
+//-----------------------------------------------------------------
+
+.lv-hero-carousel-controls {
+	color: white;
+
+	@include media-breakpoint-down(sm) {
+	    top: 25%;
+	}
+
+	.lv-hero-carousel-prev-btn,
+	.lv-hero-carousel-next-btn {
+		@include transition();
+		font-size: rem-calc(45);
+		background: rgba(0,0,0, 0.5);
+		border-radius: 100%;
+		margin: rem-calc(0 40); // revised
+
+		@include media-breakpoint-down(sm) {
+		    width: 30px;
+		    height: 30px;
+		    line-height: 30px;
+		    margin: 0; // revised
+		    font-size: rem-calc(30);
+		}
+
+		&:hover {
+			@include media-breakpoint-up(xl) {
+			    background: rgba(0,0,0, 0.6);
+			}
+		}
+	}
+
+	.lv-hero-carousel-prev-btn i {
+		text-indent: -10%;
+	}
+	.lv-hero-carousel-next-btn i {
+		text-indent: 10%;
+	}
+}
+
+//=========================================
+//
+//=========================================

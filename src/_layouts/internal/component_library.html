@@ -1,0 +1,132 @@
+---
+layout: internal
+---
+
+{% assign settings = site.data.settings %}
+{% assign articles = site.data.articles %}
+{% assign events = site.data.events %}
+
+<div class="container" style="max-width: 500px;">
+
+	<!-- =========================================================
+		 BUTTONS
+	============================================================== -->
+
+	<h2 class="clearfix m-y-lg">Buttons</h2>
+
+	<a href="#" class="btn btn-primary btn-text">Read More <i class="fa fa-angle-right"></i></a>&nbsp;
+	<a href="#" class="btn btn-primary"><i class="fa fa-angle-right"></i></a> <br><br>
+
+	<h3 class="m-y-md">Text editor buttons</h3>
+
+	<span class="btn-document"><a href="#" target="_blank">Document Link Here</a></span>
+	<span class="btn-document"><a href="#" target="_blank">Document Link Here</a></span>
+	<span class="btn-document"><a href="#" target="_blank">Document Link Here</a></span>
+	<span class="btn-document"><a href="#" target="_blank">Document Link Here</a></span>
+
+	<!-- =========================================================
+		 CARD
+	============================================================== -->
+
+	<h2 class="clearfix m-y-lg">.card-full</h2>
+
+	{% for item in articles | limit: 1 %}
+		{% include components/card.html %}
+	{% endfor %}
+
+	<!-- =========================================================
+		 CARD MINIMAL - small btn - text body - used for News
+	============================================================== -->
+
+	<h2 class="clearfix m-y-lg">.card-minimal with small button</h2>
+
+	{% for item in articles | limit: 1 %}
+		{% include components/card_minimal.html %}
+	{% endfor %}
+
+	<!-- =========================================================
+		 CARD MINIMAL - small btn - No text body - used for service tiles / events
+	============================================================== -->
+
+	<h2 class="clearfix m-y-lg">.card-minimal</h2>
+
+	{% for item in events | limit: 1 %}
+		{% include components/card_minimal.html %}
+	{% endfor %}
+
+	<!-- =========================================================
+		 MULTIPLE CARDS - Original Card wrapped in block-grid - Used on Homepage
+	============================================================== -->
+
+	<h2 class="clearfix m-y-lg">Multiple Cards</h2>
+
+	<ul class="cards-collapse-xs block-grid-xs-1">
+		{% for item in articles | limit: 2 %}
+			<li class="col-md-4 col-lg-4">
+				{% include components/card.html %}
+			</li>
+		{% endfor %}
+	</ul>
+
+	<!-- =========================================================
+		 CARD SLIM - Used in Sidebar on homepage
+	============================================================== -->
+
+	<h2 class="clearfix m-y-lg">.card-slim</h2>
+
+	{% for item in articles | limit: 1 %}
+		{% include components/card_slim.html %}
+	{% endfor %}
+
+	<!-- =========================================================
+		 CARD LIST ITEM (zero X borders, added Y padding)
+	============================================================== -->
+
+	<h2 id="card-list" class="clearfix m-y-lg">.card-slim inside .card-list</h2>
+
+	{% for item in articles | limit: 3 %}
+		<div class="card-list">
+			{% include components/card_slim.html %}
+		</div>
+	{% endfor %}
+
+	<!-- =========================================================
+		 COLOR CARDS
+	============================================================== -->
+
+	<h2 class="clearfix m-y-lg">.color-card</h2>
+
+	{% include components/color_cards.html %}
+
+	<!-- =========================================================
+		 BASIC FORM
+	============================================================== -->
+
+	<h2 class="clearfix m-y-lg">Basic Form</h2>
+
+	{% include components/basic_form.html %}
+
+	<!-- =========================================================
+		 BIO CARD
+	============================================================== -->
+
+	<h2 class="clearfix m-y-lg">.card-bio</h2>
+
+	{% include components/card_bio.html %}
+
+	<!-- =========================================================
+		 CONTACT INFO - Used in footer and off canvas
+	============================================================== -->
+
+	<h2 class="clearfix m-y-lg">Contact Info</h2>
+
+	{% include components/contact_info.html %}
+
+
+</div>
+
+<!-- =========================================================
+	 PARTNERS - Used in footer
+============================================================== -->
+
+{% include components/partners.html %}

@@ -1,0 +1,57 @@
+/*
+    SOCIAL-MEDIA.CSS
+
+    - Last updated: 07.01.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Social Media
+//-----------------------------------------------------------------
+
+.social-media {
+	a {
+		display: inline-block;
+		width: rem-calc(44);
+		height: rem-calc(44);
+		line-height: rem-calc(44);
+		color: white;
+		text-align: center;
+		font-size: rem-calc(25);
+		border-radius: 100%;
+	}
+
+	.linked-in {
+		background: #1F85C6;
+
+		&:hover {
+			@include media-breakpoint-up(xl) {
+			    background: lighten(#1F85C6, 10%);
+			}
+		}
+	}
+
+	.google-plus {
+		background: #D93939;
+
+		&:hover {
+			@include media-breakpoint-up(xl) {
+			    background: lighten(#D93939, 10%);
+			}
+		}
+	}
+}
+
+.off-canvas-menu .social-media {
+
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+//=========================================
+//
+//=========================================

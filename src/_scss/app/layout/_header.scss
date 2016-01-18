@@ -1,0 +1,115 @@
+/*
+    HEADER.CSS
+
+    - Last updated: 00.00.00
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$header-height-sm: 100px !default;
+$header-height-md: 130px !default;
+$header-height-lg: 180px !default;
+
+//-----------------------------------------------------------------
+// Header
+//-----------------------------------------------------------------
+
+.global-header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: $header-height-sm;
+	background-color: rgba(white, 0.9);
+	z-index: 1000;
+	box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.2);
+	// border-bottom: 0.5px solid rgba(0, 0, 0, 0.2); // iphone 6, stupid
+
+	@include media-breakpoint-up(md) {
+	    height: $header-height-md;
+	}
+
+	@include media-breakpoint-up(lg) {
+	    height: $header-height-lg;
+	    position: absolute;
+	    box-shadow: none;
+	}
+
+	@include media-breakpoint-up(xl) {
+
+	}
+}
+
+//-----------------------------------------------------------------
+// Logged In
+//-----------------------------------------------------------------
+
+.logged-in .global-header {
+	top: 60px;
+}
+
+.logged-in .lv-page {
+	margin-top: 60px;
+}
+
+//-----------------------------------------------------------------
+// Logo
+//-----------------------------------------------------------------
+
+.global-header .logo {
+	position: relative;
+	top: 14px;
+
+	@include media-breakpoint-up(md) {
+	    top: 15px;
+	}
+
+	@include media-breakpoint-up(lg) {
+	    top: 85px;
+	}
+
+	img {
+		width: 210px;
+
+		@include media-breakpoint-up(md) {
+		    width: 221px;
+		}
+
+		@include media-breakpoint-up(lg) {
+		    width: 221px;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// Hamburger
+//-----------------------------------------------------------------
+
+.global-mobile-menu {
+	position: absolute;
+	right: 15px;
+	top: 45%;
+	display: block;
+	overflow: hidden;
+
+	.hamburger {
+		display: block;
+		font-size: rem-calc(40);
+		line-height: 0;
+		color: #393E44;
+		cursor: pointer;
+	}
+}
+
+//=========================================
+//
+//=========================================
+
+// .hamburger {
+// 	@include hamburger($width: 28px, $gap: 6px, $thickness: 5px, $color: #383E44);
+
+// 	@include media-breakpoint-up(md) {
+// 	    @include hamburger($width: 28px, $gap: 5px, $thickness: 5px, $color: #383E44);
+// 	}
+// }

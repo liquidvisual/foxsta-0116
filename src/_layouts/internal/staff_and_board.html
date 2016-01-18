@@ -1,0 +1,36 @@
+---
+layout: internal
+---
+
+{% assign settings = site.data.settings %}
+{% assign articles = site.data.articles %}
+
+<div class="container">
+
+	<div class="row m-b-md">
+		<div class="col-md-7">
+			{{ content }}
+		</div>
+	</div>
+
+	<h2 class="m-b-md">Clubs SA Board</h2>
+
+	<ul class="clearfix m-b-lg block-grid-xs-1 block-grid-md-2">
+		{% for item in articles | limit: 7 %}
+			<li class="col-md-4 col-lg-4">
+				{% include components/card_bio.html %}
+			</li>
+		{% endfor %}
+	</ul>
+
+	<h2 class="m-b-md">Clubs SA Staff</h2>
+
+	<ul class="clearfix block-grid-xs-1 block-grid-md-2">
+		{% for item in articles | limit: 5 %}
+			<li class="col-md-4 col-lg-4">
+				{% include components/card_bio.html %}
+			</li>
+		{% endfor %}
+	</ul>
+
+</div>

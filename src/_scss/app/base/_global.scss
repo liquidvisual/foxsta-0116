@@ -1,0 +1,69 @@
+/*
+    GLOBAL.CSS
+
+    - Last updated: 22.10.15
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Page
+//-----------------------------------------------------------------
+
+.lv-page {
+	padding-top: $header-height-sm;
+
+	@include media-breakpoint-up(md) {
+	    padding-top: $header-height-md;
+	}
+
+	@include media-breakpoint-up(lg) {
+	    padding-top: $header-height-lg;
+	}
+
+	@include media-breakpoint-up(xl) {
+		padding-top: $header-height-lg + $lv-nav-height;
+	}
+}
+
+//-----------------------------------------------------------------
+// Responsive Typography
+//-----------------------------------------------------------------
+
+html {
+	@include media-breakpoint-up(xs) { font-size: $font-size-xs; }
+	@include media-breakpoint-up(sm) { font-size: $font-size-sm; }
+	@include media-breakpoint-up(md) { font-size: $font-size-md; }
+	@include media-breakpoint-up(lg) { font-size: $font-size-lg; }
+	@include media-breakpoint-up(xl) { font-size: $font-size-xl; }
+}
+
+//-----------------------------------------------------------------
+// Tweaked padding formMobile only
+//-----------------------------------------------------------------
+
+.container {
+	@include media-breakpoint-down(sm) {
+	    padding-left: rem-calc(20);
+	    padding-right: rem-calc(20);
+	}
+}
+
+//-----------------------------------------------------------------
+// Font Smoothing
+//-----------------------------------------------------------------
+
+// html,
+// body {
+//      -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+//              font-smoothing: antialised;
+// }
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

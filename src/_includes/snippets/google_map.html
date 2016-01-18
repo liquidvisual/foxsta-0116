@@ -1,0 +1,14 @@
+{% assign address = include.address %}
+
+<style>
+    .touch .google-map {
+        pointer-events: none;
+    }
+</style>
+
+<iframe class="google-map"
+        width="100%"
+        height="250"
+        frameborder="0"
+        src="https://maps.google.com/maps?hl=en&q={{address | strip_html }}&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed">
+</iframe>

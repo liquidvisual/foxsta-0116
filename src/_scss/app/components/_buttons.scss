@@ -1,0 +1,59 @@
+/*
+    BUTTONS.CSS
+
+    - Last updated: 22.10.2015
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Buttons
+//-----------------------------------------------------------------
+
+.btn-primary {
+	padding: rem-calc(3 10 3 13); // precise alignment
+
+	.fa {
+		@include transition();
+		font-size: rem-calc(24);
+		color: rgba(white, 0.5);
+	}
+
+	&:hover i {
+		@include media-breakpoint-up(xl) {
+		    color: white;
+		}
+	}
+}
+
+//=========================================
+// Text Buttons
+//=========================================
+
+.btn-text {
+	padding: rem-calc(10 13);
+
+	.fa {
+		position: relative;
+		top: 4px;
+		right: -5px;
+		line-height: 0;
+	}
+
+	.fa-angle-left {
+		right: 5px;
+	}
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+.color-card .btn {
+	padding: rem-calc(3 15 3 18); // precise alignment
+
+	i {
+		color: white;
+	}
+}

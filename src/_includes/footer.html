@@ -1,0 +1,65 @@
+{% assign settings = site.data.settings %}
+
+<!-- FOOTER BODY -->
+<section class="global-footer-body">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-lg-4">
+
+                <!-- SOCIAL MEDIA -->
+                <ul class="social-media list-inline">
+                    <li><a class="linked-in" target="_blank" href="{{ settings.linked_in }}"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a class="google-plus" target="_blank" href="{{ settings.google_plus }}"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+
+                <!-- CONTACT DETAILS -->
+                <h4>{{ settings.company }}</h4>
+                <p>P: {{ settings.phone }}<br>
+                   F: {{ settings.fax }}<br>
+                   E: <a href="mailto:{{ settings.email }}">{{ settings.email }}</a></p>
+
+                <p>{{ settings.offices[0].address }}<br>
+                <a href="{{ settings.google_map }}">View map</a></p>
+
+            </div>
+            <div class="col-md-7 col-lg-8 text-right">
+
+                <!-- REPEATS IN FOOTER BOTTOM BELOW -->
+                <div class="footer-legal hidden-md-up">
+                    {{ site.data.settings.company }} &copy; {{ site.time | date: '%Y' }}<br>
+                    ABN: {{ site.data.settings.abn }}<br>
+                    <a href="/docs/">Privacy Policy</a>&nbsp;&nbsp;
+                    <a href="/docs/">Disclaimer</a><br>
+                    <a href="/docs/">Docs</a>
+                </div>
+
+                <img width="112" src="/img/template/law-society-stamp.png" alt="Law Society Accreditation">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER LEGAL -->
+<section class="global-footer-bottom">
+    <div class="container">
+    	<div class="row">
+    		<div class="col-xs-12 text-right">
+
+                <!-- REPEATED -->
+                <ul class="list-inline pull-left hidden-sm-down">
+                    <li>{{ site.data.settings.company }} &copy; {{ site.time | date: '%Y' }}</li>&nbsp;&nbsp;&nbsp;
+                    <li>ABN: {{ site.data.settings.abn }}</li>&nbsp;&nbsp;&nbsp;
+                    <li><a href="/privacy-policy/" target="_blank">Privacy Policy</a></li>&nbsp;&nbsp;&nbsp;
+                    <li><a href="/dislaimer/" target="_blank">Disclaimer</a></li>&nbsp;&nbsp;&nbsp;
+                    <li><a href="/docs/" target="_blank">Docs</a></li>
+                </ul>
+
+			    <a class="author-logo" target="_blank" href="{{ settings.author.url }}">
+			        <span class="text">{{ settings.author.description }}</span>
+                    <img width="20" src="{{ settings.author.logo }}" alt="Created by {{ settings.author.title }}">
+			    </a>
+    		</div>
+    	</div>
+    </div>
+</section>

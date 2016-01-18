@@ -1,0 +1,74 @@
+/*
+    CLIENT-BAR.CSS
+
+    - Last updated: 29.10.15
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Client Bar
+//-----------------------------------------------------------------
+
+.logged-in-bar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	background: #959697;
+	overflow: hidden;
+	z-index: 99999;
+
+	p {
+		margin: rem-calc(15 20 0 0);
+		font-size: rem-calc(13);
+		color: white;
+		line-height: 16px;
+		float: left;
+		padding-left: 10px;
+
+		.text {
+			position: relative;
+			left: 22px;
+		}
+
+		.fa {
+			position: absolute;
+			font-size: rem-calc(20);
+			padding-right: 10px;
+		}
+	}
+
+	.text-name {
+		display: block;
+	}
+
+	.btn {
+		position: relative;
+		top: -2px;
+		font-size: rem-calc(12);
+		font-weight: bold;
+		background: #797779;
+		text-transform: uppercase;
+		color: white;
+		padding: rem-calc(8 15);
+		margin: 0;
+
+		&:hover {
+			@include media-breakpoint-up(xl) {
+			    background: darken(#797779, 10%);
+			}
+		}
+
+		.fa {
+			font-size: inherit;
+			font-weight: bold;
+		}
+	}
+}
+
+//=========================================
+//
+//=========================================

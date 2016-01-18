@@ -1,0 +1,50 @@
+/*
+    TYPE.CSS
+
+    - Last updated: 27.10.15
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Headings
+//-----------------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.3;
+}
+
+.stage-header h1,
+.stage-header h2 {
+	border-bottom: 1px solid #DEDEDE;
+	padding-bottom: rem-calc(15);
+	margin-bottom: rem-calc(40);
+}
+
+//-----------------------------------------------------------------
+// Anchors
+//-----------------------------------------------------------------
+
+a,
+.btn {
+	@include transition();
+}
+
+// consider: http://stackoverflow.com/questions/27878304/css-darken-on-hover-with-unknown-color
+// Use this instead of setting colors
+// a:hover {
+// 	opacity: 0.95;
+// }
+
+//-----------------------------------------------------------------
+// Paragraphs
+//-----------------------------------------------------------------
+
+p, ul, ol {
+	margin-bottom: rem-calc(24); // requested - should be in bootstrap
+}
+
+//=========================================
+//
+//=========================================

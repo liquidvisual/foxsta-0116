@@ -1,0 +1,131 @@
+/*
+    FOOTER.CSS
+
+    - Last updated: 21.10.15
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Global Footer
+//-----------------------------------------------------------------
+
+.global-footer {
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $font-family-sans-serif;
+		color: white;
+		// margin-bottom: 0; // override with reboot default
+	}
+
+	font-family: $font-family-serif;
+}
+
+//-----------------------------------------------------------------
+// Footer Body
+//-----------------------------------------------------------------
+
+.global-footer-body {
+	position: relative;
+	overflow: hidden;
+	padding: rem-calc(30 0 40 0);
+	background: $dark-color;
+	color: white;
+	font-size: rem-calc(15);
+
+	.social-media {
+		float: right;
+	}
+
+	.footer-legal {
+		text-align: left;
+		position: absolute;
+		bottom: 0;
+	}
+
+	// Whiten email link
+	a[href*="mailto:"],
+	a[href*="tel:"],
+	.footer-legal a {
+		color: white;
+	}
+
+	@include media-breakpoint-up(md) {
+	    padding: rem-calc(70 0 25 0);
+	}
+}
+
+//=========================================
+// Contact Box
+//=========================================
+
+.contact-info {
+	position: relative;
+	color: white;
+
+	a {
+		color: white;
+
+		&:hover {
+			color: #eee;
+		}
+	}
+}
+
+//=========================================
+// Contact Box
+//=========================================
+
+.global-footer-body .contact-info .social-media {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	@include media-breakpoint-up(md) {
+		top: rem-calc(30);
+	    right: rem-calc(40);
+	}
+
+	a {
+		margin: rem-calc(0 0 5 5);
+
+		// SMALL ONLY
+		@include media-breakpoint-down(md) {
+		    display: block;
+		    margin: 10px;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// Footer Bottom
+//-----------------------------------------------------------------
+
+.global-footer-bottom {
+	overflow: hidden; // force
+	background: #3d3d3d;
+	height: rem-calc(58);
+	line-height: rem-calc(58);
+	color: white;
+
+	a {
+		color: white;
+		font-size: rem-calc(15);
+	}
+
+	img {
+		position: relative;
+		top: rem-calc(-2);
+		margin-left: rem-calc(5);
+	}
+
+	.author-logo {
+		font-size: rem-calc(11);
+		text-transform: uppercase;
+		color: rgba(white, 0.5);
+	}
+}
+
+//=========================================
+//
+//=========================================
