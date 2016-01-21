@@ -8,6 +8,7 @@
 // Variables
 //-----------------------------------------------------------------
 
+$primary-color                 : $brand-secondary;
 $global-radius                 : 0 !default;
 $lv-nav-padding                : 15px !default;
 $lv-nav-height                 : 44px !default;
@@ -36,7 +37,7 @@ $dropdowns-have-anchor-borders : true !default;
 .topbar {
     position: absolute; // locked
     right: 0;
-    bottom: calc(100% + 110px);
+    // bottom: calc(100% + 110px);
 }
 body {
     -webkit-font-smoothing: antialised;
@@ -51,8 +52,9 @@ body {
     margin: 0; // reset
     padding: 0; // reset
     text-transform: uppercase;
+    font-family: $font-family-sans-serif;
     font-size: rem-calc(14);
-    font-weight: 400;
+    font-weight: 600;
 }
 
 //=========================================
@@ -113,6 +115,11 @@ body {
     &:hover {
         background: $primary-color; //lighten($top-parent-anchor-bg-color, 10%);
         color: white;
+    }
+
+    // Optional
+    &:hover > .text {
+        border-bottom: none !important;
     }
 }
 
@@ -180,8 +187,9 @@ body {
     // width: rem-calc(240);
     width: rem-calc(405);
     // background: lighten($secondary-color, 10%);
-    background: $primary-color;
+    background: #04A1B4;
     border-radius: 0 0 $global-radius $global-radius;
+    border-top: 8px solid $primary-color;
 }
 
 // Prevent far-right dropdown from exceeding page width
@@ -227,7 +235,8 @@ body {
 
 @if $dropdowns-have-anchor-borders {
     .topbar .dropdown a {
-        border-bottom: 1px solid darken($primary-color, 2%); // optional
+        // border-bottom: 1px solid darken($primary-color, 2%); // optional
+        border-top: 1px solid darken($primary-color, 5%); // optional
     }
 
     .topbar .dropdown li:last-child a {

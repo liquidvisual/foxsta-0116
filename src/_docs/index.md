@@ -2,6 +2,7 @@
 layout: internal/docs
 title: Documentation
 permalink: /docs/
+hero: /img/content/hero-expertise.jpg
 ---
 
 {% assign breakpoints = site.data.settings.breakpoints %}
@@ -36,41 +37,10 @@ permalink: /docs/
 
 <br>
 
-<h2>Themes</h2>
-
-<p>Placing the following theme classes on the <code>body</code> element will colour the buttons and links accordingly.</p>
-
-<table class="table" style="width: 300px;">
-	<tr class="theme-1">
-		<td>.theme-1</td>
-		<td><a class="btn btn-primary" href="#">quaternary-color</a></td>
-	</tr>
-	<tr class="theme-2">
-		<td>.theme-2</td>
-		<td><a class="btn btn-primary" href="#">primary-color</a></td>
-	</tr>
-	<tr class="theme-3">
-		<td>.theme-3</td>
-		<td><a class="btn btn-primary" href="#">secondary-color</a></td>
-	</tr>
-	<tr class="theme-4">
-		<td>.theme-4</td>
-		<td><a class="btn btn-primary" href="#">tertiary-color</a></td>
-	</tr>
-	<tr class="theme-5">
-		<td>.theme-5</td>
-		<td><a class="btn btn-primary" href="#">quaternary-color</a></td>
-	</tr>
-	<tr class="theme-6">
-		<td>.theme-6</td>
-		<td><a class="btn btn-primary" href="#">quinary-color</a></td>
-	</tr>
-</table>
-
 <h2>Modes</h2>
 
 <h3>Dev Mode</h3>
-<p class="panel">The <b>'.dev-mode-enabled'</b> class on the div <b><i>'.lv-super'</i></b> will enable the responsive helper widget. Clicking on this widget will also highlight parts of containers to aid with distinguishing layouts.</p>
+<p class="panel">The <b>'dev-mode-enabled'</b> attribute on the div <b><i>'.lv-super'</i></b> will enable the responsive helper widget. Clicking on this widget will also highlight parts of containers to aid with distinguishing layouts.</p>
 
 <h2>Font Icons</h2>
 

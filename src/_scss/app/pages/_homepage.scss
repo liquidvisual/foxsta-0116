@@ -10,3 +10,48 @@
 //-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
+
+
+
+//-----------------------------------------------------------------
+// Split Section
+//-----------------------------------------------------------------
+
+.split-section {
+
+	[class*="col"]:nth-child(2) {
+		position: relative;
+		color: white;
+
+		h1, h2, h3, h4, h5, h6 {
+			color: white;
+		}
+	}
+
+	&:after {
+		@include media-breakpoint-up(md) {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			width: 50%;
+			z-index: -1;
+			background: $brand-primary;
+		}
+	}
+}
+
+.bg-fill {
+	@include media-breakpoint-down(sm) {
+	    position: absolute;
+	    top: 0;
+	    left: -50%;
+	    right: 100%;
+	    bottom: -200%;
+	    width: 200%;
+	    height: 100%;
+	    z-index: -1;
+	    background: $brand-primary;
+	}
+}

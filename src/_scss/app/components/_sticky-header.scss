@@ -1,0 +1,45 @@
+/*
+    STICKY-HEADER.CSS
+
+    - Last updated: 18.01.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Sticky Header
+//
+// http://osvaldas.info/auto-hide-sticky-header
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+.sticky-header {
+
+	// position: fixed;
+	// top: 0;
+	// left: 0;
+	// width: 100%;
+
+	//=========================================
+	// FOR LAZY BEHAVIOR
+	//=========================================
+
+	-webkit-transition-duration: .5s;
+	transition-duration: .5s;
+
+	-webkit-transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
+	transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
+
+	-webkit-transition-property: -webkit-transform;
+	transition-property: transform;
+
+	&.is-hidden {
+		-webkit-transform: translateY( -100% );
+		-ms-transform: translateY( -100% );
+		transform: translateY( -100% );
+	}
+}
+
+//=========================================
+//
+//=========================================

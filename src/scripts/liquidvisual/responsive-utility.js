@@ -98,7 +98,7 @@
     // Display if body has 'dev-mode' attribute
     //-----------------------------------------------------------------
 
-    if ($('body[dev-mode]').length) {
+    if ($('body[dev-mode-enabled="true"]').length) {
 
         // Launch it
         responsiveHelper();

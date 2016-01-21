@@ -17,27 +17,31 @@ $header-height-lg: 180px !default;
 //-----------------------------------------------------------------
 
 .global-header {
+
 	position: fixed;
 	top: 0;
+	left: 0;
 	width: 100%;
 	height: $header-height-sm;
 	background-color: rgba(white, 0.9);
-	z-index: 1000;
+	font-family: $font-family-sans-serif;
+	font-weight: 600;
 	box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.2);
-	// border-bottom: 0.5px solid rgba(0, 0, 0, 0.2); // iphone 6, stupid
+	border-bottom: 0.5px solid rgba(0, 0, 0, 0.2); // iphone 6, stupid
+	z-index: 1000;
 
 	@include media-breakpoint-up(md) {
 	    height: $header-height-md;
 	}
 
 	@include media-breakpoint-up(lg) {
-	    height: $header-height-lg;
-	    position: absolute;
+	    // height: $header-height-lg;
+	    // position: absolute;
 	    box-shadow: none;
 	}
 
 	@include media-breakpoint-up(xl) {
-
+		height: $header-height-lg;
 	}
 }
 
@@ -62,21 +66,25 @@ $header-height-lg: 180px !default;
 	top: 14px;
 
 	@include media-breakpoint-up(md) {
-	    top: 15px;
+	    top: 20px;
 	}
 
 	@include media-breakpoint-up(lg) {
+	    top: 20px;
+	}
+
+	@include media-breakpoint-up(xl) {
 	    top: 85px;
 	}
 
 	img {
-		width: 210px;
+		width: 140px;
 
 		@include media-breakpoint-up(md) {
-		    width: 221px;
+		    width: 190px;
 		}
 
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xl) {
 		    width: 221px;
 		}
 	}
@@ -89,15 +97,16 @@ $header-height-lg: 180px !default;
 .global-mobile-menu {
 	position: absolute;
 	right: 15px;
-	top: 45%;
+	top: 50%;
 	display: block;
 	overflow: hidden;
+	// background: red;
 
 	.hamburger {
 		display: block;
-		font-size: rem-calc(40);
+		font-size: rem-calc(35);
 		line-height: 0;
-		color: #393E44;
+		color: #383D43;
 		cursor: pointer;
 	}
 }

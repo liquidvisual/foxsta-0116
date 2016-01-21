@@ -30,7 +30,7 @@
 	    	right: rem-calc(15);
 
 	    	a {
-	    		color: $dark-text-color;
+	    		color: #515151;
 	    		font-size: rem-calc(16);
 	    		// font-weight: normal;
 	    	}
@@ -69,7 +69,7 @@
 }
 
 .off-canvas-menu .contact-info .fa {
-	background: darken($primary-color, 6%);
+	background: darken($brand-secondary, 6%);
 }
 
 //-----------------------------------------------------------------

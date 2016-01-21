@@ -1,13 +1,14 @@
 {% assign settings = site.data.settings %}
 {% assign logo = "/img/content/logo.png" %}
-<!-- { % assign logo = "http://placehold.it/250x150" %} -->
 
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
 
             <!-- Search Top -->
-            {% include components/contact_info.html %}
+            <div class="hidden-lg-down">
+                {% include components/contact_info.html %}
+            </div>
 
             <div class="display-table">
                 <div class="display-cell">

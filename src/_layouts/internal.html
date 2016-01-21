@@ -2,27 +2,41 @@
 layout: master
 ---
 
-<!-- BREADCRUMBS -->
-<nav class="breadcrumbs {% unless page.breadcrumbs %} invisible {% endunless %}">
-    <div class="container">
-        {% include snippets/breadcrumb.html %}
+{% assign hero = page.hero %}
+
+{% capture subtitle %}
+    {% if page.subtitle %}
+        <small>{{ page.subtitle }}</small>
+    {% endif %}
+{% endcapture %}
+
+<!-- HERO -->
+<div class="lv-hero has-fixed-height">
+    <!-- HERO ITEM -->
+    <div class="lv-hero-item" style="background-image: url('{{ hero | prepend: site.assets }}')" data-background-image="{{ hero.image | prepend: site.assets }}">
+
+        <!-- STAGE HEADER -->
+        <header class="stage-header">
+        	<div class="container">
+        		{% if page.title_override %}
+        			<h2 class="h1">{{ page.title_override }} {{ subtitle }}</h2>
+        		{% else %}
+        			<h1>{{ page.title }} {{ subtitle }}</h1>
+        		{% endif %}
+        	</div>
+
+            <!-- BREADCRUMBS -->
+            <nav class="breadcrumbs {% unless page.breadcrumbs %} invisible {% endunless %}">
+                <div class="container">
+                    {% include snippets/breadcrumb.html %}
+                </div>
+            </nav>
+        </header>
+
     </div>
-</nav>
+</div> <!-- .lv-hero -->
 
 <!-- STAGE -->
 <section class="stage">
-
-	<!-- STAGE HEADER -->
-	<header class="stage-header">
-		<div class="container">
-			{% if page.title_override %}
-				<h2 class="h1">{{ page.title_override }}</h2>
-			{% else %}
-				<h1>{{ page.title }}</h1>
-			{% endif %}
-		</div>
-	</header>
-
     {{ content }}
-
 </section>

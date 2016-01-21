@@ -11,38 +11,37 @@
     <title>{{ page.title }}</title>
 
     <!-- CDN -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700|Lora:400,400italic,700,700italic">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700|Lora:400,400italic,700,700italic"> -->
 
     <!-- Fav Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | prepend: site.assets }}">
 
     <!-- build:css({src,.tmp}) /assets/css/minified.css -->
-    <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <!-- endbuild -->
 
 </head>
-<body class="{{ page.theme }} {{ page.status }}"{{ site.mode }}>
+<body class="{{ page.theme }} {{ page.status }}" dev-mode-enabled="{{ site.dev_mode_enabled }}">
     <div class="lv-super">
         <div class="lv-page">
 
             <!-- HEADER -->
-            <header class="global-header">
+            <header class="global-header sticky-header FixedTop">
                 {% include header.html %}
-            </header>
 
-            <!-- NAVIGATION -->
-            <nav class="global-navigation hidden-lg-down">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="topbar">
-                                {% include snippets/navigation.html %}
+                <!-- NAVIGATION -->
+                <nav class="global-navigation hidden-lg-down">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="topbar">
+                                    {% include snippets/navigation.html %}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </header>
 
             {{ content }}
 
@@ -74,17 +73,20 @@
     <script src="/_bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/_bower_components/bxSlider/jquery.bxslider.min.js"></script>
     <script src="/_bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all.js"></script>
-    <script src="/_bower_components/nprogress/nprogress.js"></script>
+
     <script src="/scripts/liquidvisual/alert-bar.js"></script>
     <script src="/scripts/liquidvisual/equal-height.js"></script>
     <script src="/scripts/liquidvisual/hero.js"></script>
     <script src="/scripts/liquidvisual/utilities.js"></script>
     <script src="/scripts/liquidvisual/responsive-utility.js"></script>
+    <script src="/scripts/liquidvisual/sticky-header-reactive.js"></script>
     <script src="/scripts/vendor/bootstrap-validator.js"></script>
     <script src="/scripts/main.js"></script>
     <!-- endbuild -->
 
     {% comment %}
+    <script src="/_bower_components/nprogress/nprogress.js"></script>
+
         <script src="/_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
         <script src="/_bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
         <script src="/_bower_components/slick.js/slick/slick.js"></script>
@@ -97,6 +99,7 @@
         <script src="/_bower_components/WOW/dist/wow.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
     {% endcomment %}
 
     <!-- Google Analytics Here -->

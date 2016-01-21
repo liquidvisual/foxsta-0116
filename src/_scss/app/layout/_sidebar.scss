@@ -1,7 +1,7 @@
 /*
     SIDEBAR.CSS
 
-    - Last updated: 00.00.00
+    - Last updated: 20.01.16
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -11,7 +11,31 @@
 // Sidebar
 //-----------------------------------------------------------------
 
+// Dangerous??
+.stage {
+	overflow: hidden;
+}
 
+.bg-fill-sidebar {
+	position: absolute;
+	top: rem-calc(-70);
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 300%;
+	height: 99999%;
+	background: $brand-primary;
+	z-index: -1;
+
+	@include media-breakpoint-down(sm) {
+	    top: rem-calc(-30);
+	    left: -50%;
+	    right: 0;
+	    // bottom: 50%;
+	    // width: 200%;
+	    height: 200%;
+	}
+}
 
 //=========================================
 //

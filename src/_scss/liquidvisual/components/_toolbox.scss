@@ -17,7 +17,7 @@
 //-----------------------------------------------------------------
 
 $font-smoothing: antialiased !default; // Override in F5 settings
-$primary-color: #008CBA !default; // Override in F5 settings
+$primary-color: $brand-primary !default; // Override in F5 settings
 $include-developer-styles: true !default;
 $include-example-styles: true !default;
 $include-form-styles: true !default;

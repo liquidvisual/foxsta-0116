@@ -1,0 +1,37 @@
+---
+layout: internal
+---
+
+{% assign sections = site.data.sitemap[1].children[5].children %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 pad-right-md">
+
+			<div class="m-b-lg">
+				{{ content }}
+
+				<div class="spacer m-b-lg"></div>
+
+				<h2 class="h3 header-icon m-b-md"><i class="fa fa-files-o"></i> <span class="text">David's areas of expertise</span></h2>
+
+				<ul class="title-btns block-grid-xs-1 block-grid-md-2">
+				    {% for item in site.data.practices | limit: 4 %}
+				        <li>
+				            {% include components/btn_tile_reduced.html title=item.title url=item.url class="h5" %}
+				        </li>
+				    {% endfor %}
+				</ul>
+
+			</div>
+
+		</div>
+		<div class="col-md-4 pad-left-md">
+
+			<div class="bg-fill-sidebar"></div>
+
+			{% include components/card_contact.html %}
+
+		</div>
+	</div>
+</div>

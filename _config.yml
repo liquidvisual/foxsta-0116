@@ -4,7 +4,7 @@
 # 3. config.yml
 
 name: new-website
-mode: dev-mode
+dev_mode_enabled: true
 
 # Grunt handles images and assets.
 exclude: ['img', 'css', 'scripts', 'fonts',

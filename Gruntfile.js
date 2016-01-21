@@ -144,7 +144,8 @@ module.exports = function (grunt) {
         //imagePath: '',
         includePaths: ['<%= yeoman.app %>/_bower_components/foundation/scss',
                        '<%= yeoman.app %>/_bower_components/jQuery.mmenu/src/scss',
-                       '<%= yeoman.app %>/_bower_components/bootstrap/scss']
+                       '<%= yeoman.app %>/_bower_components/bootstrap/scss',
+                       '<%= yeoman.app %>/_bower_components/animatewithsass']
       },
       dist: {
         files: [{

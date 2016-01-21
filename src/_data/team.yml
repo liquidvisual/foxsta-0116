@@ -1,0 +1,92 @@
+- title: Family law team
+  color: white
+  children:
+    - title: Fidan Shevket
+      url: /our-expertise/our-expertise-item/
+      subtitle: Director & Accredited Specialist in Family Law
+    - title: Inoka Ho
+      url: /our-expertise/our-expertise-item/
+      subtitle: Family Law Solicitor
+    - title: Joshua Anderson
+      url: /our-expertise/our-expertise-item/
+      subtitle: Family Law Solicitor
+
+- title: Litigation team
+  color: gray-light
+  children:
+    - title: Wal Abramowicz
+      url: /our-expertise/our-expertise-item/
+      subtitle: Director
+    - title: Andrew Cameron
+      url: /our-expertise/our-expertise-item/
+      subtitle: Litigation Solicitor
+    - title: Richard Martyn
+      url: /our-expertise/our-expertise-item/
+      subtitle: Litigation Solicitor
+    - title: William Emery
+      url: /our-expertise/our-expertise-item/
+      subtitle: Litigation Solicitor
+
+- title: Property law & Conveyancing team
+  color: brand-secondary
+  children:
+    - title: Richard Staniland
+      url: /our-expertise/our-expertise-item/
+      subtitle: Director
+    - title: David Gordon
+      url: /our-expertise/our-expertise-item/
+      subtitle: Director
+    - title: Craig Lockart
+      url: /our-expertise/our-expertise-item/
+      subtitle: Director & Accredited Specialist in Property Law
+    - title: Ian McPerson
+      url: /our-expertise/our-expertise-item/
+      subtitle: Commercial and Property Law Solicitor
+
+- title: Estate planning team
+  color: brand-primary
+  children:
+    - title: Richard Staniland
+      url: /our-expertise/our-expertise-item/
+      subtitle: Director
+    - title: David Gordon
+      url: /our-expertise/our-expertise-item/
+      subtitle: Director
+    - title: Craig Lockart
+      url: /our-expertise/our-expertise-item/
+      subtitle: Director & Accredited Specialist in Property Law
+    - title: Ian McPerson
+      url: /our-expertise/our-expertise-item/
+      subtitle: Commercial and Property Law Solicitor
+
+- title: Leases and business law team
+  color: white
+  children:
+    - title: Richard Staniland
+      url: /our-expertise/our-expertise-item/
+      subtitle: Director
+    - title: David Gordon
+      url: /our-expertise/our-expertise-item/
+      subtitle: Director
+    - title: Craig Lockart
+      url: /our-expertise/our-expertise-item/
+      subtitle: Director & Accredited Specialist in Property Law
+    - title: Ian McPerson
+      url: /our-expertise/our-expertise-item/
+      subtitle: Commercial and Property Law Solicitor
+
+- title: Will challenge team
+  color: gray-light
+  children:
+    - title: Wal Abramowicz
+      url: /our-expertise/our-expertise-item/
+      subtitle: Director
+    - title: Andrew Cameron
+      url: /our-expertise/our-expertise-item/
+      subtitle: Litigation Solicitor
+    - title: Richard Martyn
+      url: /our-expertise/our-expertise-item/
+      subtitle: Litigation Solicitor
+    - title: William Emery
+      url: /our-expertise/our-expertise-item/
+      subtitle: Litigation Solicitor

@@ -12,12 +12,29 @@
 //-----------------------------------------------------------------
 
 .breadcrumbs {
-	margin: rem-calc(15 0 -50 0);
-	font-size: rem-calc(12);
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 100%;
+	// margin: rem-calc(15 0 -50 0);
+	font-size: rem-calc(13);
 
-	@include media-breakpoint-up(md) {
-	    margin: rem-calc(15 0 -56 0);
+	a:hover {
+		color: white !important;
 	}
+
+	li:before {
+		font-family: "FontAwesome";
+	}
+
+	*,
+	*:before {
+		color: #9fe7ef !important;
+	}
+
+	// @include media-breakpoint-up(md) {
+	//     // margin: rem-calc(15 0 -56 0);
+	// }
 }
 
 //=========================================

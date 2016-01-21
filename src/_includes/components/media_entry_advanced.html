@@ -1,0 +1,21 @@
+<div class="media media-entry">
+	<div class="media-left hidden-md-down p-r-md">
+
+		<a href="/blog/blog-item/"><img class="media-object" width="130" src="/img/ui/placeholder.png" alt="Thumbnail"></a>
+		<span class="media-object-subtitle">By</span> <a href="/our-people/our-people-item/">David Gordon</a>
+
+	</div>
+	<div class="media-body">
+
+		<h3 class="media-heading card-title h4">
+			<a href="/blog/blog-item/">{{ item.title }}</a>
+		</h3>
+
+		<date>{{ item.date | date: "%d %B %Y" | upcase }}</date> <span class="media-heading-subtitle">COMMERCIAL &amp; BUSINESS LAW</span>
+		<div class="clearfix"></div>
+
+		<!-- TRUNCATE (410 max chars) -->
+		<p class="m-b-0">{{ item.body | truncate: 410 }}
+		<a href="/blog/blog-item/">Read more <i class="fa fa-angle-right"></i></a></p>
+	</div>
+</div>

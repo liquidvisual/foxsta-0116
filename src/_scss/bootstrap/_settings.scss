@@ -26,34 +26,18 @@
 // //
 // // Grayscale and brand colors for use across Bootstrap.
 
-// $gray-dark:                 #373a3c !default;
+$gray-dark:                    #333333; //#373a3c !default;
 // $gray:                      #55595c !default;
-// $gray-light:                #818a91 !default;
+$gray-light:                   #F4F5F5; //#818a91 !default;
 // $gray-lighter:              #eceeef !default;
 // $gray-lightest:             #f7f7f9 !default;
 
-$primary-color:                #01ADC0;
-$secondary-color:              #016F82;
-$tertiary-color:               #FFF;
-
-$link-light-color:             #09D6EE;
-$link-dark-color:              #343333;
-
-$dark-color:                   #333333;
-$light-color:                  #F4F5F5;
-
-$dark-text-color:              #4E4E4E;
-
-$quaternary-color:             #1D5276;
-$quinary-color:                #1B6395;
-$senary-color:                 #E2632E;
-$septenary-color:              #F27946;
-
-$brand-primary:                $primary-color !default;
+$brand-primary:                #016F82;
+$brand-secondary:              #01ADC0;
 // $brand-success:             #5cb85c !default;
 // $brand-info:                #5bc0de !default;
 // $brand-warning:             #f0ad4e !default;
-$brand-danger:              #9F111D !default;
+$brand-danger:                 #9F111D !default;
 
 
 // // Options
@@ -85,14 +69,14 @@ $spacer:                     rem-calc(20); //1rem !default;
 // // Settings for the `<body>` element.
 
 // $body-bg:                    #fff !default;
-$body-color:                    red;//#929191; //$gray-dark !default;
+$body-color:                    #5c5b5b; //#929191; //$gray-dark !default;
 
 
 // // Links
 // //
 // // Style anchor elements.
 
-$link-color:                 $link-light-color; //$brand-primary !default;
+$link-color:                 $brand-secondary; //$brand-primary !default;
 // $link-decoration:            none !default;
 // $link-hover-color:           darken($link-color, 15%) !default;
 $link-hover-decoration:      none; //underline !default;
@@ -156,7 +140,7 @@ body {
 $font-family-sans-serif:     "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:          "Lora", Georgia, "Times New Roman", Times, serif !default;
 // $font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
-// $font-family-base:           $font-family-sans-serif !default;
+$font-family-base:           $font-family-serif !default;
 
 // // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 // $font-size-root:             16px !default;
@@ -187,12 +171,12 @@ $font-size-h6:               1rem;
 
 $line-height:                1.4; //1.5 !default;
 $headings-margin-bottom:     rem-calc(14); //($spacer / 2) !default;
-// $headings-font-family:       inherit !default;
+$headings-font-family:       $font-family-sans-serif !default; //inherit !default;
 $headings-font-weight:       700 !default;
 // $headings-line-height:       1.1 !default;
-$headings-color:             #343535; //inherit !default;
+$headings-color:             $gray-dark; //inherit !default;
 
-// $lead-font-size:             1.25rem !default;
+$lead-font-size:             rem-calc(23); //1.25rem !default;
 // $lead-font-weight:           300 !default;
 
 // $text-muted:                  $gray-light !default;
@@ -249,7 +233,7 @@ $table-border-color:            #E0E0E2; //$gray-lighter !default;
 // $btn-font-weight:                normal !default;
 
 // $btn-primary-color:              #fff !default;
-$btn-primary-bg:                 $senary-color; //$brand-primary !default;
+$btn-primary-bg:                    darken($gray-dark, 2%); //$brand-primary !default;
 // $btn-primary-border:             $btn-primary-bg !default;
 
 // $btn-secondary-color:            $gray-dark !default;
@@ -289,7 +273,7 @@ $btn-primary-bg:                 $senary-color; //$brand-primary !default;
 // // Forms
 
 // $input-padding-x:                .75rem !default;
-// $input-padding-y:                .375rem !default;
+$input-padding-y:                .600rem; //.375rem !default;
 
 // $input-bg:                       #fff !default;
 // $input-bg-disabled:              $gray-lighter !default;
@@ -317,7 +301,7 @@ $input-box-shadow:               none; //inset 0 1px 1px rgba(0,0,0,.075) !defau
 // $input-height-lg:                (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2)) !default;
 // $input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2)) !default;
 
-// $form-group-margin-bottom:       $spacer-y !default;
+$form-group-margin-bottom:       12px; //$spacer-y !default;
 
 // $input-group-addon-bg:           $gray-lighter !default;
 // $input-group-addon-border-color: $input-border !default;
@@ -418,16 +402,16 @@ $input-box-shadow:               none; //inset 0 1px 1px rgba(0,0,0,.075) !defau
 // $pagination-padding-y-lg:             .75rem !default;
 
 
-// $pagination-color:                     $link-color !default;
+$pagination-color:                     #999; //$link-color !default;
 // $pagination-bg:                        #fff !default;
-// $pagination-border:                    #ddd !default;
+$pagination-border:                    none; //#ddd !default;
 
 // $pagination-hover-color:               $link-hover-color !default;
 // $pagination-hover-bg:                  $gray-lighter !default;
 // $pagination-hover-border:              #ddd !default;
 
-// $pagination-active-color:              #fff !default;
-// $pagination-active-bg:                 $brand-primary !default;
+$pagination-active-color:              $brand-secondary; //#fff !default;
+$pagination-active-bg:                 $brand-secondary;//$brand-primary !default;
 // $pagination-active-border:             $brand-primary !default;
 
 // $pagination-disabled-color:            $gray-light !default;
@@ -623,7 +607,7 @@ $breadcrumb-padding-horizontal: 0; //1rem !default;
 $breadcrumb-bg:                 none; //$gray-lighter !default;
 // $breadcrumb-divider-color:      $gray-light !default;
 // $breadcrumb-active-color:       $gray-light !default;
-// $breadcrumb-divider:            "/" !default;
+$breadcrumb-divider:            "" !default;
 
 
 // // Carousel

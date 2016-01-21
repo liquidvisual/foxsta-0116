@@ -48,10 +48,13 @@
 @import "app/components/forms";
 @import "app/components/hero";
 @import "app/components/lists";
+@import "app/components/media";
 @import "app/components/modal";
 @import "app/components/off-canvas";
+@import "app/components/pagination";
 @import "app/components/sections";
 @import "app/components/side-nav";
+@import "app/components/sticky-header";
 @import "app/components/social-media";
 @import "app/components/tabs";
 @import "app/components/type";
@@ -63,6 +66,7 @@
 @import "app/layout/footer";
 @import "app/layout/header";
 @import "app/layout/header-icons";
+@import "app/layout/sidebar";
 @import "app/layout/stage";
 @import "app/layout/topbar";
 // @import "app/layout/navigation";
@@ -71,6 +75,7 @@
 // Pages
 //=========================================
 
+@import "app/pages/contact";
 @import "app/pages/homepage";
 
 //=========================================
@@ -86,6 +91,7 @@
 // Vendor
 //-----------------------------------------------------------------
 
+@import "/_bower_components/animate.css/animate.min.css";
 @import "../_bower_components/font-awesome/scss/font-awesome";
 // @import "../_bower_components/slick.js/slick/slick";
 @import "liquidvisual/vendor/magnific-popup/main";

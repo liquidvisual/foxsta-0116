@@ -1,0 +1,27 @@
+---
+layout: internal
+---
+
+{% assign settings = site.data.settings %}
+{% assign articles = site.data.articles %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 pad-right-md">
+			<ul class="block-list">
+				{% for item in site.data.articles limit: 3 %}
+					<li>
+						{% include components/media_entry_advanced.html %}
+					</li>
+				{% endfor %}
+			</ul>
+
+			{% include snippets/pagination.html %}
+		</div>
+		<div class="col-md-4 pad-left-md">
+
+			<div class="bg-fill-sidebar"></div>
+
+		</div>
+	</div>
+</div>

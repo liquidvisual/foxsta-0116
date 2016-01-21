@@ -1,0 +1,40 @@
+---
+layout: internal
+---
+
+{% assign sections = site.data.sitemap[1].children[5].children %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 pad-right-md">
+
+			<div class="m-b-lg">
+				{{ content }}
+
+				<div class="spacer m-b-lg"></div>
+
+				<h3 class="header-icon m-b-md"><i class="fa fa-comments-o m-b"></i>&nbsp; Read more about our free seminars...</h3>
+
+				<ul class="title-btns block-grid-xs-1">
+				    {% for item in site.data.seminars %}
+				        <li>
+				            {% include components/btn_tile_reduced.html title=item.title url=item.url class="h3" %}
+				        </li>
+				    {% endfor %}
+				</ul>
+
+			</div>
+
+		</div>
+		<div class="col-md-4 pad-left-md">
+
+			<div class="bg-fill-sidebar"></div>
+
+			<!-- FREE SEMINARS -->
+			<h3 class="underline m-b-0"><i class="fa fa-calendar"></i>&nbsp; Read more about our free seminars</h3>
+
+
+
+		</div>
+	</div>
+</div>
