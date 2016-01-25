@@ -267,10 +267,11 @@
         		
         	</div>
 
-            <!-- BREADCRUMBS -->
-            <nav class="breadcrumbs ">
-                <div class="container">
-                    
+            
+                <!-- BREADCRUMBS -->
+                <nav class="breadcrumbs">
+                    <div class="container">
+                        
 
 
 
@@ -291,8 +292,11 @@
     
 </ol>
 
-                </div>
-            </nav>
+                    </div>
+                </nav>
+            
+            
+
         </header>
 
     </div>
@@ -313,13 +317,14 @@
 
             </div>
 
+            <div class="spacer m-b-md"></div>
 			<div class="accordion" role="tablist" aria-multiselectable="true">
 	
 		<div class="panel panel-default">
 			<div class="panel-heading" role="tab" id="heading-1">
 				<h2 class="h4 panel-title">
 					<a class="collapsed" data-toggle="collapse" data-parent=".accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
-						Collapsible Group Item #1
+						Collapsible Group Item long name #1
 						<i class="fa fa-angle-up"></i>
 					</a>
 				</h2>
@@ -335,7 +340,7 @@
 			<div class="panel-heading" role="tab" id="heading-2">
 				<h2 class="h4 panel-title">
 					<a class="collapsed" data-toggle="collapse" data-parent=".accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
-						Collapsible Group Item #2
+						Collapsible Group Item long name #2
 						<i class="fa fa-angle-up"></i>
 					</a>
 				</h2>
@@ -351,7 +356,7 @@
 			<div class="panel-heading" role="tab" id="heading-3">
 				<h2 class="h4 panel-title">
 					<a class="collapsed" data-toggle="collapse" data-parent=".accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
-						Collapsible Group Item #3
+						Collapsible Group Item long name #3
 						<i class="fa fa-angle-up"></i>
 					</a>
 				</h2>
@@ -367,7 +372,7 @@
 			<div class="panel-heading" role="tab" id="heading-4">
 				<h2 class="h4 panel-title">
 					<a class="collapsed" data-toggle="collapse" data-parent=".accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
-						Collapsible Group Item #4
+						Collapsible Group Item long name #4
 						<i class="fa fa-angle-up"></i>
 					</a>
 				</h2>
@@ -383,7 +388,7 @@
 			<div class="panel-heading" role="tab" id="heading-5">
 				<h2 class="h4 panel-title">
 					<a class="collapsed" data-toggle="collapse" data-parent=".accordion" href="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
-						Collapsible Group Item #5
+						Collapsible Group Item long name #5
 						<i class="fa fa-angle-up"></i>
 					</a>
 				</h2>
@@ -398,7 +403,7 @@
 </div>
 
         </div>
-        <div class="col-lg-4 pad-left-md">
+        <div class="col-lg-4 pad-left-lg">
             <aside class="sidebar inverse">
 				
 				    
@@ -431,7 +436,8 @@
 
 <div class="spacer m-b-lg"></div>
 
-<h4 class="header-icon"><i class="fa fa-comments-o align-middle"></i><span class="text">Get in touch today to discuss your legal matter</span></h4>
+<!-- Inline style for extremely unique case -->
+<h4 class="header-icon"><i style="font-size: 2.5rem; padding-right: 5px;" class="fa fa-comments-o"></i><span class="text align-top">Get in touch today to discuss your legal matter</span></h4>
 
 <div class="card-contact">
 	<hr>
@@ -447,23 +453,27 @@
 <p>Fill out this form &amp; one of our team will phone you back...</p>
 
 <form data-toggle="validator" class="callback-form">
-
-	<!-- NAME -->
-	<fieldset class="form-group">
-		<input class="form-control" id="name" type="text" placeholder="Name" required>
-		<small class="error">Your name is required.</small>
-	</fieldset>
-
-	<!-- PHONE -->
-	<fieldset class="form-group">
-		<div class="input-group">
-			<input type="phone" class="form-control" placeholder="Phone">
-			<span class="input-group-btn">
-				<button type="submit" class="btn btn-primary"><i class="fa fa-angle-right"></i></button>
-			</span>
+	<div class="row">
+		<!-- NAME -->
+		<div class="col-xs-5 col-md-6 col-lg-12">
+			<fieldset class="form-group">
+				<input class="form-control" id="name" type="text" placeholder="Name" required>
+				<small class="error">Your name is required.</small>
+			</fieldset>
 		</div>
-		<small class="error">Your phone is required.</small>
-	</fieldset>
+		<!-- PHONE -->
+		<div class="col-xs-7 col-md-6 col-lg-12 p-l-0-md-down">
+			<fieldset class="form-group">
+				<div class="input-group">
+					<input type="phone" class="form-control" placeholder="Phone">
+					<span class="input-group-btn">
+						<button type="submit" class="btn btn-primary"><i class="fa fa-angle-right"></i></button>
+					</span>
+				</div>
+				<small class="error">Your phone is required.</small>
+			</fieldset>
+		</div>
+	</div>
 </form>
 				
             </aside>

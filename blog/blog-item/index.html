@@ -267,28 +267,16 @@
         		
         	</div>
 
-            <!-- BREADCRUMBS -->
-            <nav class="breadcrumbs ">
-                <div class="container">
-                    
+            
+            
+                <!-- BACK BUTTON -->
+                <nav class="breadcrumbs">
+                    <div class="container">
+                        <a href="/blog/"><i class="fa fa-angle-left"></i> Back to Blog</a>
+                    </div>
+                </nav>
+            
 
-
-
-<ol class="breadcrumb">
-    <li><a href="/">Home</a></li>
-    
-        
-            <li><a href="/blog/">blog</a></li>
-        
-    
-        
-            <!-- <li class="active">blog item</li> -->
-        
-    
-</ol>
-
-                </div>
-            </nav>
         </header>
 
     </div>
@@ -310,7 +298,8 @@
             	</div>
             	<div class="media-body">
             		<h1 class="media-heading card-title h2">That's Pie Country. They Do a Lot of Baking Up There.</h1>
-            		<date>05 JANUARY 2015</date> <span class="media-heading-subtitle">COMMERCIAL &amp; BUSINESS LAW</span>
+            		<date>05 JANUARY 2015</date>
+                    <span class="media-heading-subtitle">COMMERCIAL &amp; BUSINESS LAW</span>
             	</div>
             </div>
 
@@ -367,7 +356,8 @@
 
 <div class="spacer m-b-lg"></div>
 
-<h4 class="header-icon"><i class="fa fa-comments-o align-middle"></i><span class="text">Get in touch today to discuss your legal matter</span></h4>
+<!-- Inline style for extremely unique case -->
+<h4 class="header-icon"><i style="font-size: 2.5rem; padding-right: 5px;" class="fa fa-comments-o"></i><span class="text align-top">Get in touch today to discuss your legal matter</span></h4>
 
 <div class="card-contact">
 	<hr>
@@ -383,23 +373,27 @@
 <p>Fill out this form &amp; one of our team will phone you back...</p>
 
 <form data-toggle="validator" class="callback-form">
-
-	<!-- NAME -->
-	<fieldset class="form-group">
-		<input class="form-control" id="name" type="text" placeholder="Name" required>
-		<small class="error">Your name is required.</small>
-	</fieldset>
-
-	<!-- PHONE -->
-	<fieldset class="form-group">
-		<div class="input-group">
-			<input type="phone" class="form-control" placeholder="Phone">
-			<span class="input-group-btn">
-				<button type="submit" class="btn btn-primary"><i class="fa fa-angle-right"></i></button>
-			</span>
+	<div class="row">
+		<!-- NAME -->
+		<div class="col-xs-5 col-md-6 col-lg-12">
+			<fieldset class="form-group">
+				<input class="form-control" id="name" type="text" placeholder="Name" required>
+				<small class="error">Your name is required.</small>
+			</fieldset>
 		</div>
-		<small class="error">Your phone is required.</small>
-	</fieldset>
+		<!-- PHONE -->
+		<div class="col-xs-7 col-md-6 col-lg-12 p-l-0-md-down">
+			<fieldset class="form-group">
+				<div class="input-group">
+					<input type="phone" class="form-control" placeholder="Phone">
+					<span class="input-group-btn">
+						<button type="submit" class="btn btn-primary"><i class="fa fa-angle-right"></i></button>
+					</span>
+				</div>
+				<small class="error">Your phone is required.</small>
+			</fieldset>
+		</div>
+	</div>
 </form>
                 
             </aside>
