@@ -1,0 +1,11 @@
+<h3 class="header-icon underline m-b"><i class="fa fa-user-plus m-b"></i>&nbsp; Blog Categories</h3>
+
+<ul class="list-unstyled">
+	{% for item in site.data.blog_categories %}
+		<li><a class="font-family-sans-serif" href="#">{{ item.title }}</a></li>
+	{% endfor %}
+</ul>
+
+<div class="spacer m-b-lg"></div>
+
+{% include components/form_callback.html %}

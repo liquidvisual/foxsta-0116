@@ -5,23 +5,19 @@ layout: internal
 {% assign sections = site.data.sitemap[1].children[5].children %}
 
 <div class="container">
-	<div class="row">
-		<div class="col-md-8 pad-right-md">
-
-			<div class="m-b-lg">
-				{{ content }}
-
-				<div class="spacer m-b-lg"></div>
-
-				<h3><i class="fa fa-home m-b"></i>&nbsp; Add your heading here</h3>
-
-			</div>
-
-		</div>
-		<div class="col-md-4 pad-left-md">
-
-			<div class="bg-fill-sidebar"></div>
-
-		</div>
-	</div>
+    <div class="row">
+        <div class="col-lg-8 pad-right-lg">
+            {{ content }}
+            <div class="spacer m-b-lg"></div>
+            <h3><i class="fa fa-home m-b"></i>&nbsp; Add your heading here</h3>
+            <div class="m-b-lg"></div>
+        </div>
+        <div class="col-lg-4 pad-left-lg">
+            <aside class="sidebar inverse">
+                {% if page.sidebar %}
+                    {% include {{ page.sidebar }} %}
+                {% endif %}
+            </aside>
+        </div>
+    </div>
 </div>

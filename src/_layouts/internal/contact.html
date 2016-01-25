@@ -1,56 +1,45 @@
 ---
 layout: internal
+sidebar: "sidebar/sidebar_contact.html"
 ---
 
 {% assign settings = site.data.settings %}
 {% assign sections = site.data.sitemap[1].children[5].children %}
 
-<section class="contact-page">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 pad-right-md">
-
-				<div class="m-b-lg">
-
-					<h2 class="h3 header-icon m-b-md"><i class="fa fa-comments-o"></i> <span class="text">Get in touch today to discuss your legal matter</span></h2>
-					<hr class="m-b-md">
-
-					<div class="row">
-						<div class="col-md-6">
-							<p class="h5"><i class="fa fa-phone"></i>&nbsp; <a href="tel:{{ settings.phone }}">{{ settings.phone }}</a></p>
-							<p class="h5"><i class="fa fa-envelope"></i>&nbsp; <a href="tel:{{ settings.email }}">{{ settings.email }}</a></p>
-							<p class="h5"><i class="fa fa-fax"></i>&nbsp; <a href="tel:{{ settings.fax }}">{{ settings.fax }}</a></p>
-						</div>
-						<div class="col-md-6">
-							<div class="display-table">
-								<div class="display-cell align-top">
-									<i class="fa fa-map-marker"></i>
-								</div>
-								<div class="display-cell">
-									<p class="h5">{{ settings.offices[0].address }}</p>
-									<p class="h5">{{ settings.offices[0].po_box }}</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-					<div class="spacer m-b-md"></div>
-
-					{% include snippets/google_map.html %}
-
-				</div>
-			</div>
-			<div class="col-md-4 pad-left-md">
-
-				<div class="bg-fill-sidebar"></div>
-
-				<!-- SEND US AN ENQUIRY -->
-				<h3 class="m-b">Send us an enquiry</h3>
-
-				{% include components/basic_form.html %}
-
-			</div>
-		</div>
-	</div>
-</section>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 pad-right-lg">
+            <div class="contact-page-section">
+            	<h2 class="h3 header-icon m-b-md"><i class="fa fa-comments-o"></i> <span class="text">Get in touch today to discuss your legal matter</span></h2>
+            	<hr class="m-b-md">
+            	<div class="row">
+            		<div class="col-md-6">
+            			<p class="h5"><i class="fa fa-phone"></i>&nbsp; <a href="tel:{{ settings.phone }}">{{ settings.phone }}</a></p>
+            			<p class="h5"><i class="fa fa-envelope"></i>&nbsp; <a href="tel:{{ settings.email }}">{{ settings.email }}</a></p>
+            			<p class="h5"><i class="fa fa-fax"></i>&nbsp; <a href="tel:{{ settings.fax }}">{{ settings.fax }}</a></p>
+            		</div>
+            		<div class="col-md-6">
+            			<div class="display-table">
+            				<div class="display-cell align-top">
+            					<i class="fa fa-map-marker"></i>
+            				</div>
+            				<div class="display-cell">
+            					<p class="h5">{{ settings.offices[0].address }}</p>
+            					<p class="h5">{{ settings.offices[0].po_box }}</p>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+            	<div class="spacer m-b-md"></div>
+            	{% include snippets/google_map.html %}
+            </div>
+        </div>
+        <div class="col-lg-4 pad-left-lg">
+            <aside class="sidebar inverse">
+                {% if page.sidebar %}
+                    {% include {{ page.sidebar }} %}
+                {% endif %}
+            </aside>
+        </div>
+    </div>
+</div>

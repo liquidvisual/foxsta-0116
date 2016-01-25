@@ -1,0 +1,22 @@
+---
+layout: internal
+sidebar: sidebar/sidebar_expertise.html
+---
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 pad-right-lg">
+            {{ content }}
+
+			{% include components/accordion.html %}
+
+        </div>
+        <div class="col-lg-4 pad-left-md">
+            <aside class="sidebar inverse">
+				{% if page.sidebar %}
+				    {% include {{ page.sidebar }} %}
+				{% endif %}
+            </aside>
+        </div>
+    </div>
+</div>

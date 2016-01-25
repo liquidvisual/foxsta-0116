@@ -1,0 +1,40 @@
+{% assign settings = site.data.settings %}
+
+<h3 class="header-icon m-b-md"><span class="text">Get in touch today to discuss your legal matter</span><i class="fa fa-comments-o align-middle"></i></h3>
+
+<div class="card-contact">
+	<hr>
+	<ul class="block-grid-2-xs">
+		<li><i class="fa fa-phone"></i><a class="h5" href="tel:{{ settings.phone }}">{{ settings.phone }}</a></li>
+		<li><i class="fa fa-envelope"></i><a class="h5" href="mailto:{{ settings.email }}">{{ settings.email }}</a></li>
+	</ul>
+	<hr>
+</div>
+
+<h4>Request a Callback</h4>
+
+<p>Fill out this form &amp; one of our team will phone you back...</p>
+
+<form data-toggle="validator" class="callback-form">
+	<div class="row">
+		<div class="col-xs-5">
+			<!-- NAME -->
+			<fieldset class="form-group">
+				<input class="form-control" id="name" type="text" placeholder="Name" required>
+				<small class="error">Your name is required.</small>
+			</fieldset>
+		</div>
+		<div class="col-xs-7 p-l-0">
+			<!-- PHONE -->
+			<fieldset class="form-group">
+				<div class="input-group">
+					<input type="phone" class="form-control" placeholder="Phone">
+					<span class="input-group-btn">
+						<button type="submit" class="btn btn-primary"><i class="fa fa-angle-right"></i></button>
+					</span>
+				</div>
+				<small class="error">Your phone is required.</small>
+			</fieldset>
+		</div>
+	</div>
+</form>

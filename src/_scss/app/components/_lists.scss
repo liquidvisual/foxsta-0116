@@ -22,11 +22,24 @@
 		border-top: 1px solid #E8E8E8;
 	}
 
-	&.inverse li {
-		border-bottom: 1px solid #258395;
-		border-top: 1px solid #258395;
+	&.has-reduced-height li {
+		padding: rem-calc(25 0);
 	}
 }
+
+.inverse .block-list li {
+	border-top: 1px solid #258395;
+	border-bottom: 1px solid #258395;
+}
+
+// Special case (Expertise) when inverse and placed 2x2 grid
+.block-list[class*="block-grid"] {
+	border-top: 1px solid #258395;
+}
+
+//-----------------------------------------------------------------
+// Styled Lists
+//-----------------------------------------------------------------
 
 // ul li {
 // 	margin-bottom: rem-calc(5);
@@ -81,6 +94,59 @@
 
 		@include media-breakpoint-up(md) {
 		    padding: (8px /2);
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// Seminar List (unqiue)
+//-----------------------------------------------------------------
+
+.seminar-list {
+	font-size: rem-calc(17);
+	color: white;
+
+	date {
+		display: block;
+		margin-bottom: rem-calc(10);
+		// font-size: rem-calc(17);
+		font-weight: bold;
+		color: #93cbd2;
+	}
+
+	.seminar-list-heading {
+		font-family: $font-family-serif;
+		font-weight: 600;
+	}
+
+	.seminar-list-time {
+		display: inline-block;
+		margin-right: rem-calc(25);
+	}
+
+	i {
+		font-size: rem-calc(20);
+		margin-right: rem-calc(5);
+	}
+
+	//=========================================
+	//
+	//=========================================
+
+	&.has-font-reduced {
+		font-size: rem-calc(14);
+
+		.seminar-list-heading {
+			font-size: rem-calc(14);
+		}
+
+		i {
+			font-size: rem-calc(16);
+			margin-right: 0;
+		}
+
+		.seminar-list-time {
+			margin-right: rem-calc(10);
 		}
 	}
 }

@@ -16,13 +16,25 @@ $gray-color: #AEADAD;
 
 .media-entry {
 
+	//=========================================
+	// Media Object (img)
+	//=========================================
+
 	.media-object {
 		margin-bottom: rem-calc(10);
+
+		@include media-breakpoint-down(lg) {
+		    width: rem-calc(120);
+		}
 	}
 
 	.media-object-subtitle {
 		color: $gray-color;
 	}
+
+	//=========================================
+	// Media Heading
+	//=========================================
 
 	.media-heading {
 		color: $brand-secondary;
@@ -30,9 +42,17 @@ $gray-color: #AEADAD;
 		line-height: 1.3;
 	}
 
+	//=========================================
+	// Media Body
+	//=========================================
+
 	.media-body {
 		color: $body-color;
 	}
+
+	//=========================================
+	// Media Body Content
+	//=========================================
 
 	.media-heading-subtitle,
 	date {
@@ -58,5 +78,30 @@ $gray-color: #AEADAD;
 }
 
 //-----------------------------------------------------------------
-//
+// Media Entry Minimal - used in blog entry
 //-----------------------------------------------------------------
+
+.media-entry-minimal {
+	date {
+		float: none;
+		margin-bottom: rem-calc(5);
+	}
+
+	.media-heading {
+		margin-bottom: 0;
+	}
+}
+
+//-----------------------------------------------------------------
+// Inverse
+//-----------------------------------------------------------------
+
+.inverse .media-entry .media-heading-subtitle,
+.inverse .media-entry date {
+	// color: #48bed3;
+	color: #93c3cc;
+}
+
+.inverse .media-entry .media-body {
+	color: #dbf7fc;
+}

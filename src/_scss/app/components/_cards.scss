@@ -115,9 +115,10 @@
 
 	a {
 		// word-wrap: break-word;
-		color: white;
-		font-size: rem-calc(15);
+		font-family: $font-family-serif;
+		// font-size: rem-calc(16);
 		font-weight: 600;
+		color: white;
 	}
 }
 

@@ -11,7 +11,40 @@
 // Accordion
 //-----------------------------------------------------------------
 
+.accordion {
+	.panel {
+		margin-bottom: rem-calc(10);
+		position: relative;
+	}
+	.panel-title > a {
+		display: block;
+		background: #F4F5F6;
+		color: $body-color;
+		padding: rem-calc(35 20 20 20);
+	}
 
+	.fa {
+		position: absolute;
+		right: rem-calc(15);
+		font-size: rem-calc(34);
+	}
+
+	.collapsed .fa:before {
+		content: "\f107";
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 0;
+	}
+
+	.panel-body {
+		background: #E4E8E8;
+	}
+
+	.panel-body-inner {
+		padding: rem-calc(30);
+	}
+}
 
 //=========================================
 //

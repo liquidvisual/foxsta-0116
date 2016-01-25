@@ -58,17 +58,28 @@ html, body {
 // Split padding on side-by-side designs
 //-----------------------------------------------------------------
 
-.pad-left-md,
-.split-pad-left {
+.pad-left-md {
+	@include media-breakpoint-up(md) {
+	    padding-left: rem-calc(50);
+	}
+}
+
+.pad-left-lg {
+	@include media-breakpoint-up(lg) {
+	    padding-left: rem-calc(50);
+	}
+}
+
+// Used on sidebars
+.pad-right-md {
 	@include media-breakpoint-up(md) {
 	    padding-right: rem-calc(50);
 	}
 }
 
-.pad-right-md,
-.split-pad-right {
-	@include media-breakpoint-up(md) {
-	    padding-left: rem-calc(50);
+.pad-right-lg {
+	@include media-breakpoint-up(lg) {
+	    padding-right: rem-calc(50);
 	}
 }
 

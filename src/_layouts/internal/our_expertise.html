@@ -1,60 +1,11 @@
 ---
-layout: internal
+layout: internal_hero_full
 ---
 
-<!-- { % assign sections = site.data.sitemap[1].children[5].children %} -->
-
-{% assign group = site.data.team[4]  %}
-
-<section class="section">
-	<div class="container">
-		<h3 class="header-icon m-b-md"><i class="fa fa-files-o m-b"></i>&nbsp; Our commercial &amp; business law services</h3>
-
-		<ul class="title-btns block-grid-xs-1 block-grid-lg-3">
-		    {% for item in site.data.practices limit: 8 %}
-		        <li>
-		            {% include components/btn_tile_reduced.html title=item.title url=item.url class="h3" %}
-		        </li>
-		    {% endfor %}
-		</ul>
-	</div>
-</section>
-
-<!-- TEAM -->
-<section class="section brand-secondary">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-9">
-
-				<h2 class="header-icon m-b-md"><i class="fa fa-users"></i> <span class="text">{{ group.title }}</span></h2>
-				<ul class="cards-list title-btns block-grid-xs-2 block-grid-md-4">
-				    {% for person in group.children | limit: 4 %}
-				        <li>
-				        	<a href="/our-people/our-people-item/" class="card-anchor">
-								{% include components/card_bio.html title=person.title subtitle=person.subtitle %}
-							</a>
-				        </li>
-				    {% endfor %}
-				</ul>
-
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- RECENT BLOGS -->
-<section class="section brand-primary hidden-sm-down">
-	<div class="container">
-		<h2 class="header-icon m-b-lg"><i class="fa fa-newspaper-o"></i> <span class="text">Recent Blogs - Commercial &amp; Business Law</span></h2>
-
-		<ul class="block-grid-lg-2 m-b-md">
-			{% for item in site.data.articles limit: 4 %}
-				<li>
-					{% include components/media_entry.html %}
-				</li>
-			{% endfor %}
-		</ul>
-
-		<p class="text-right"><a href="#" class="btn btn-primary btn-text">Read more blogs <i class="fa fa-angle-right"></i></a></p>
-	</div>
-</section>
+<ul class="title-btns block-grid-xs-1 block-grid-lg-2">
+    {% for item in site.data.practices limit: 8 %}
+        <li>
+            {% include components/btn_tile_reduced.html title=item.title url="/our-expertise/our-expertise-item/" class="h3" %}
+        </li>
+    {% endfor %}
+</ul>

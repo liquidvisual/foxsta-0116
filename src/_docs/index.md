@@ -1,5 +1,5 @@
 ---
-layout: internal/docs
+layout: internal/text_page_sidebar
 title: Documentation
 permalink: /docs/
 hero: /img/content/hero-expertise.jpg

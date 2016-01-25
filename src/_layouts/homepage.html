@@ -6,7 +6,7 @@ layout: master
 {% assign articles = site.data.articles %}
 
 <!-- HERO -->
-{% include hero.html %}
+<!-- { % include hero.html %} -->
 
 <!-- STAGE -->
 <section class="stage">
@@ -15,7 +15,7 @@ layout: master
 	<section class="section split-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 split-pad-left">
+				<div class="col-lg-6 pad-right-md">
 
 					<!-- RECENT BLOGS -->
 					<h2 class="underline m-b-0"><i class="fa fa-newspaper-o"></i>&nbsp; Recent Blogs</h2>
@@ -33,19 +33,23 @@ layout: master
 					<p class="text-right"><a href="#" class="btn btn-primary btn-text">Read more blogs <i class="fa fa-angle-right"></i></a></p>
 
 				</div>
-				<div class="col-md-6 split-pad-right inverse-section">
-					<div class="bg-fill"></div>
+				<div class="col-lg-6 pad-left-md">
+					<aside class="sidebar inverse">
 
-					<!-- FREE SEMINARS -->
-					<h2 class="underline"><i class="fa fa-comments-o"></i>&nbsp; Free Seminars</h2>
 
-					<p>Fox &amp; Staniland Lawyers present free seminars in various locations on the North Shore of Sydney. Each seminar runs for approximately one hour and covers a range of issues. Call us now to reserve your place on (02) 94401202 or email us at lawyers@foxstaniland.com.au to let us know which seminar you'd like to attend and how many people will be attending with you, so we can reserve a place for you. We look forward to seeing you there!</p>
+						<!-- FREE SEMINARS -->
+						<h2 class="underline"><i class="fa fa-comments-o"></i>&nbsp; Free Seminars</h2>
 
-					{% include components/seminar_listing.html %}
+						<p>Fox &amp; Staniland Lawyers present free seminars in various locations on the North Shore of Sydney. Each seminar runs for approximately one hour and covers a range of issues. Call us now to reserve your place on (02) 94401202 or email us at lawyers@foxstaniland.com.au to let us know which seminar you'd like to attend and how many people will be attending with you, so we can reserve a place for you. We look forward to seeing you there!</p>
 
-					<div class="spacer m-b-lg"></div>
+						<br>
 
-					<p class="text-right"><a href="#" class="btn btn-primary btn-text">Read more about our free seminars <i class="fa fa-angle-right"></i></a></p>
+						{% include components/seminar_listing.html %}
+
+						<div class="spacer m-b-lg"></div>
+
+						<p class="text-right"><a href="#" class="btn btn-primary btn-text">Read more about our free seminars <i class="fa fa-angle-right"></i></a></p>
+					</aside>
 				</div>
 			</div>
 
@@ -53,10 +57,10 @@ layout: master
 	</section>
 
 	<!-- OUR PEOPLE / OUR FIRM -->
-	<section class="section brand-secondary">
+	<section class="section brand-secondary" hidden>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 split-pad-left">
+				<div class="col-md-6 pad-right-md">
 					<h2><i class="fa fa-users"></i>&nbsp; Our People</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -66,7 +70,7 @@ layout: master
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					<p class="text-right"><a href="#" class="btn btn-primary btn-text">Meet our team <i class="fa fa-angle-right"></i></a></p>
 				</div>
-				<div class="col-md-6 split-pad-right">
+				<div class="col-md-6 pad-left-md">
 					<h2><i class="fa fa-align-left"></i>&nbsp; Our Firm</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

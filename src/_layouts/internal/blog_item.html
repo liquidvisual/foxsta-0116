@@ -1,5 +1,6 @@
 ---
 layout: internal
+sidebar: sidebar/sidebar_blog_item.html
 ---
 
 {% assign sections = site.data.sitemap[5].children %}
@@ -7,37 +8,30 @@ layout: internal
 {% assign article = site.data.articles[0] %}
 
 <div class="container">
-	<div class="row">
-		<div class="col-lg-8 pad-right-md">
+    <div class="row">
+        <div class="col-lg-8 pad-right-lg">
+            <div class="media media-entry m-b-lg">
+            	<div class="media-left hidden-md-down p-r-md">
+            		<a href="/blog/blog-item/"><img class="media-object" width="130" src="/img/ui/placeholder.png" alt="Thumbnail"></a>
+            		<span class="media-object-subtitle">By</span> <a href="/our-people/our-people-item/">David Gordon</a>
+            	</div>
+            	<div class="media-body">
+            		<h1 class="media-heading card-title h2">{{ article.title }}</h1>
+            		<date>{{ article.date | date: "%d %B %Y" | upcase }}</date> <span class="media-heading-subtitle">COMMERCIAL &amp; BUSINESS LAW</span>
+            	</div>
+            </div>
 
-			<div class="media media-entry m-b-lg">
-				<div class="media-left hidden-md-down p-r-md">
-					<a href="/blog/blog-item/"><img class="media-object" width="130" src="/img/ui/placeholder.png" alt="Thumbnail"></a>
-					<span class="media-object-subtitle">By</span> <a href="/our-people/our-people-item/">David Gordon</a>
-				</div>
-				<div class="media-body">
-					<h1 class="media-heading card-title h2">{{ article.title }}</h1>
-					<date>{{ article.date | date: "%d %B %Y" | upcase }}</date> <span class="media-heading-subtitle">COMMERCIAL &amp; BUSINESS LAW</span>
-				</div>
-			</div>
+            <img width="395" class="image-right" src="/img/ui/placeholder.png">
 
-			<img width="395" class="image-right" src="/img/ui/placeholder.png">
+            {{ content | markdownify }}
 
-			{{ article.body | markdownify }}
-
-		</div>
-		<div class="col-lg-4 pad-left-md">
-
-			<div class="bg-fill-sidebar"></div>
-
-			<h2 class="m-b-md">Other News</h2>
-
-			{% for item in news | limit: 3 %}
-				<div class="card-list">
-					<!-- { % include components/card_slim.html %} -->
-				</div>
-			{% endfor %}
-
-		</div>
-	</div>
+        </div>
+        <div class="col-lg-4 pad-left-lg">
+            <aside class="sidebar inverse">
+                {% if page.sidebar %}
+                    {% include {{ page.sidebar }} %}
+                {% endif %}
+            </aside>
+        </div>
+    </div>
 </div>

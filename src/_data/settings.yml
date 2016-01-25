@@ -12,16 +12,16 @@ description: ""
 
 # CONTACT
 email: lawyers@foxstaniland.com.au
-phone: (02) 9440 1202
-fax: (02) 9440 1205
+phone: 02 9440 1202
+fax: 02 9440 1205
 abn: 13 168 867 927
 
 # OFFICES
 offices:
   - title: Our Office
     address: "Level 1, 4-10 Bridge Street<br> Pymble NSW 2073"
-    phone: (02) 9440 1202
-    fax: (02) 9440 1205
+    phone: 02 9440 1202
+    fax: 02 9440 1205
     po_box: "PO Box 6113,<br>Pymble NSW 2073"
 
 # SOCIAL MEDIA
@@ -30,7 +30,7 @@ linked_in: ""
 google_plus: ""
 
 # GOOGLE
-google_map: ""
+google_map: "https://www.google.com.au/maps/place/Fox+%26+Staniland+Lawyers/@-33.749678,151.1454379,15z/data=!4m2!3m1!1s0x0:0x5e592755310fbbc1"
 google_analytics: "UA-XXXXXXXX-X"
 
 # AUTHOR

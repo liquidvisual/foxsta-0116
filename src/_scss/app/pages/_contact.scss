@@ -11,7 +11,7 @@
 //
 //-----------------------------------------------------------------
 
-.contact-page {
+.contact-page-section {
 	p {
 		font-size: rem-calc(18);
 		font-family: $font-family-serif;
@@ -25,6 +25,12 @@
 	.fa-comments-o {
 		font-size: rem-calc(45);
 		padding-right: 10px;
+	}
+
+	.bg-fill-sidebar {
+		@include media-breakpoint-down(md) {
+		    left: -50%;
+		}
 	}
 
 	a {

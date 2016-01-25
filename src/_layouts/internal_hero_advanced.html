@@ -1,0 +1,41 @@
+---
+layout: master
+---
+
+{% assign hero = page.hero %}
+
+<!-- HERO -->
+<div class="lv-hero hero-advanced has-auto-height">
+    <!-- HERO ITEM -->
+    <div class="lv-hero-item" style="background-image: url('{{ hero | prepend: site.assets }}')" data-background-image="{{ hero.image | prepend: site.assets }}">
+
+        <!-- STAGE HEADER -->
+        <div class="stage-header inverse">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 pad-right-lg">
+						<div class="special-fill"></div>
+						<h1>{{ page.title }}</h1>
+						<p class="font-family-serif">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<br>
+						<a href="#" class="btn btn-text btn-primary">Explore our commercial &amp; business law service &amp; team</a>
+					</div>
+					<div class="col-md-6 pad-left-lg">
+						{% include components/form_hero.html %}
+					</div>
+				</div>
+			</div>
+        </div>
+
+    </div>
+</div> <!-- .lv-hero -->
+
+<!-- STAGE -->
+<section class="stage">
+    {{ content }}
+</section>

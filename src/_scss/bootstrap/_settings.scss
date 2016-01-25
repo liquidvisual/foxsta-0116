@@ -37,7 +37,7 @@ $brand-secondary:              #01ADC0;
 // $brand-success:             #5cb85c !default;
 // $brand-info:                #5bc0de !default;
 // $brand-warning:             #f0ad4e !default;
-$brand-danger:                 #9F111D !default;
+$brand-danger:                 #E7002C !default;
 
 
 // // Options
@@ -273,13 +273,13 @@ $btn-primary-bg:                    darken($gray-dark, 2%); //$brand-primary !de
 // // Forms
 
 // $input-padding-x:                .75rem !default;
-$input-padding-y:                .600rem; //.375rem !default;
+$input-padding-y:                .510rem; //.375rem !default;
 
 // $input-bg:                       #fff !default;
 // $input-bg-disabled:              $gray-lighter !default;
 
 // $input-color:                    $gray !default;
-// $input-border:                   #ccc !default;
+$input-border: transparent;    // #ccc !default;
 $input-box-shadow:               none; //inset 0 1px 1px rgba(0,0,0,.075) !default;
 
 // $input-border-radius:            $border-radius !default;

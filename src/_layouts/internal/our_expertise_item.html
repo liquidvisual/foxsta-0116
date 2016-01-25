@@ -1,0 +1,75 @@
+---
+layout: internal_hero_advanced
+---
+
+<!-- { % assign sections = site.data.sitemap[1].children[5].children %} -->
+
+{% assign group = site.data.team[4]  %}
+
+<section class="section">
+	<div class="container">
+		<h3 class="header-icon m-b-md"><i class="fa fa-files-o"></i><span class="text">Our commercial &amp; business law services</span></h3>
+
+		<ul class="title-btns block-grid-xs-1 block-grid-lg-3">
+		    {% for item in site.data.practices limit: 8 %}
+		        <li>
+		            {% include components/btn_tile_reduced.html title=item.title url=item.url class="h3" %}
+		        </li>
+		    {% endfor %}
+		</ul>
+	</div>
+</section>
+
+<!-- TEAM -->
+<section class="section brand-secondary">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9">
+
+				<h2 class="header-icon m-b-md"><i class="fa fa-users"></i> <span class="text">{{ group.title }}</span></h2>
+				<ul class="cards-list title-btns block-grid-xs-2 block-grid-md-4">
+				    {% for person in group.children | limit: 4 %}
+				        <li>
+				        	<a href="/our-people/our-people-item/" class="card-anchor">
+								{% include components/card_bio.html title=person.title subtitle=person.subtitle %}
+							</a>
+				        </li>
+				    {% endfor %}
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- RECENT BLOGS -->
+<section class="section brand-primary inverse hidden-sm-down">
+	<div class="container">
+		<h2 class="header-icon m-b-lg"><i class="fa fa-newspaper-o"></i> <span class="text">Recent Blogs - Commercial &amp; Business Law</span></h2>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 pad-right-md">
+					<ul class="block-grid-lg-1 block-list m-b-md">
+						{% for item in site.data.articles limit: 2 %}
+							<li>
+								{% include components/media_entry.html %}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="col-md-6 pad-left-md">
+					<ul class="block-grid-lg-1 block-list m-b-md">
+						{% for item in site.data.articles limit: 2 offset: 2 %}
+							<li>
+								{% include components/media_entry.html %}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<p class="text-right"><a href="#" class="btn btn-primary btn-text">Read more blogs <i class="fa fa-angle-right"></i></a></p>
+	</div>
+</section>
