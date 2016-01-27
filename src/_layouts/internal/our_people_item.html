@@ -8,10 +8,15 @@ sidebar: "sidebar/sidebar_people_item.html"
 <div class="container">
     <div class="row">
         <div class="col-lg-8 pad-right-lg">
-            {{ content }}
+
+            <div class="wysiwyg">
+                {{ content }}
+            </div>
 
             <div class="spacer m-b-lg"></div>
-            <h2 class="h3 header-icon m-b-md"><i class="fa fa-files-o"></i> <span class="text">David's areas of expertise</span></h2>
+
+            <h3 class="header-icon m-b-md"><i class="fa fa-comments-o"></i><span class="text">Read more about our free seminars...</span></h3>
+
             <ul class="title-btns block-grid-xs-1 block-grid-md-2">
                 {% for item in site.data.practices | limit: 4 %}
                     <li>

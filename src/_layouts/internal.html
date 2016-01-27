@@ -25,12 +25,23 @@ layout: master
         		{% endif %}
         	</div>
 
-            <!-- BREADCRUMBS -->
-            <nav class="breadcrumbs {% unless page.breadcrumbs %} invisible {% endunless %}">
-                <div class="container">
-                    {% include snippets/breadcrumb.html %}
-                </div>
-            </nav>
+            {% if page.breadcrumbs %}
+                <!-- BREADCRUMBS -->
+                <nav class="breadcrumbs">
+                    <div class="container">
+                        {% include snippets/breadcrumb.html %}
+                    </div>
+                </nav>
+            {% endif %}
+            {% if page.back_breadcrumb %}
+                <!-- BACK BUTTON -->
+                <nav class="breadcrumbs">
+                    <div class="container">
+                        <a href="{{ page.back_breadcrumb }}"><i class="fa fa-angle-left"></i> Back to {{ page.title_override }}</a>
+                    </div>
+                </nav>
+            {% endif %}
+
         </header>
 
     </div>

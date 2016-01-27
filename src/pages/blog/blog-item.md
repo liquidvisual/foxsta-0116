@@ -3,7 +3,7 @@ layout: internal/blog_item
 title: That's Pie Country. They Do a Lot of Baking Up There.
 title_override: Blog
 permalink: /blog/blog-item/
-breadcrumbs: true
+back_breadcrumb: /blog/
 hero: /img/content/hero-blog.jpg
 ---
 

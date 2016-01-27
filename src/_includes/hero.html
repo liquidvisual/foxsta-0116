@@ -14,7 +14,7 @@
 {% assign hero_images = site.data.carousel_slides %}
 
 <!-- HERO -->
-<div class="lv-hero has-auto-height">
+<div class="lv-hero has-auto-height hero-homepage">
 
     {% for hero in hero_images %}
 
@@ -27,7 +27,7 @@
                 <ul class="title-btns block-grid-xs-1 block-grid-md-2">
                     {% for item in site.data.practices %}
                         <li>
-                            {% include components/btn_tile.html title=item.title %}
+                            {% include components/btn_tile.html title=item.title url="/our-expertise/our-expertise-item/" %}
                         </li>
                     {% endfor %}
                 </ul>

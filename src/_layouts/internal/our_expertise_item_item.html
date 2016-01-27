@@ -6,12 +6,16 @@ sidebar: sidebar/sidebar_expertise.html
 <div class="container">
     <div class="row">
         <div class="col-lg-8 pad-right-lg">
-            {{ content }}
 
+            <div class="wysiwyg">
+                {{ content }}
+            </div>
+
+            <div class="spacer m-b-md"></div>
 			{% include components/accordion.html %}
 
         </div>
-        <div class="col-lg-4 pad-left-md">
+        <div class="col-lg-4 pad-left-lg">
             <aside class="sidebar inverse">
 				{% if page.sidebar %}
 				    {% include {{ page.sidebar }} %}

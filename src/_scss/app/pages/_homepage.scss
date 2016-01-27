@@ -10,43 +10,34 @@
 //-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
-
-
-
 //-----------------------------------------------------------------
 // Split Section
 //-----------------------------------------------------------------
 
-.split-sectionX {
+// .split-sectionX {
 
-	[class*="col"]:nth-child(2) {
-		// position: relative;
+// 	[class*="col"]:nth-child(2) {
+// 		position: relative;
+// 	}
+
+.bg-fill-homepage {
+	position: relative;
+
+	.section {
+		z-index: 2;
 	}
 
-	&:after {
-		@include media-breakpoint-up(lg) {
+	&:before {
+		@include media-breakpoint-down(sm) {
 			content: "";
 			position: absolute;
 			top: 0;
-			right: 0;
+			left: -100%;
 			bottom: 0;
-			width: 50%;
-			z-index: -1;
-			background: $brand-primary;
+			width: 99999%;
+			height: 100%;
+			// z-index: -1;
+			background: red; //$brand-primary;
 		}
-	}
-}
-
-.bg-fill {
-	@include media-breakpoint-down(sm) {
-	    position: absolute;
-	    top: 0;
-	    left: -50%;
-	    right: 100%;
-	    bottom: -200%;
-	    width: 200%;
-	    height: 100%;
-	    z-index: -1;
-	    background: $brand-primary;
 	}
 }

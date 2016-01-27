@@ -64,8 +64,13 @@ $gray-color: #AEADAD;
 	}
 
 	date {
-		float: left;
-		margin-right: rem-calc(25);
+		@include media-breakpoint-up(md) {
+		    float: left;
+		}
+
+		@include media-breakpoint-up(md) {
+		    margin-right: rem-calc(25);
+		}
 	}
 
 	.media-heading-subtitle {

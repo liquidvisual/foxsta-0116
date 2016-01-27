@@ -18,6 +18,28 @@
 //-----------------------------------------------------------------
 // Special
 //-----------------------------------------------------------------
+
+.google-map {
+	@include media-breakpoint-down(md) {
+	    pointer-events: none;
+	}
+}
+
+// Gah
+.special-block-list {
+	li:first-child {
+		border-top: 0;
+		padding-top: 0;
+	}
+}
+
+// used by weird form
+.p-l-0-md-down {
+	@include media-breakpoint-down(md) {
+	    padding-left: 0;
+	}
+}
+
 //-----------------------------------------------------------------
 // Special
 //-----------------------------------------------------------------

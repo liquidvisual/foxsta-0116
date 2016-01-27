@@ -9,12 +9,17 @@ sidebar: sidebar/sidebar_seminars_item.html
 <div class="container">
     <div class="row">
         <div class="col-lg-8 pad-right-lg">
-            {{ content }}
+
+            <div class="wysiwyg">
+                {{ content }}
+            </div>
+
             <div class="spacer m-b-lg"></div>
-            <h3><i class="fa fa-users m-b"></i><span class="text">&nbsp; Family Law seminar presenters...</span></h3>
+
+            <h3 class="header-icon m-b-md"><i class="fa fa-users"></i><span class="text">Family Law seminar presenters...</span></h3>
             <div class="row">
             	<div class="col-lg-10">
-            		<ul class="cards-list title-btns block-grid-xs-2 block-grid-lg-3">
+            		<ul class="cards-list title-btns block-grid-xs-3">
             		    {% for person in group.children %}
             		        <li>
             		        	<a href="/our-people/our-people-item/" class="card-anchor">

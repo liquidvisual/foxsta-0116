@@ -15,9 +15,29 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.3;
 }
 
+//-----------------------------------------------------------------
+// Hack to replace p.leads with H2s
+//-----------------------------------------------------------------
+
+.wysiwyg h2 {
+	font-family: $font-family-serif;
+	margin-bottom: rem-calc(30);
+	font-size: $lead-font-size;
+	font-weight: normal;
+
+}
+
+.spacer {
+	height: 1px;
+}
+
+//-----------------------------------------------------------------
+// Headers with ICONS inside
+//-----------------------------------------------------------------
+
 .header-icon {
 	display: table;
-	width: 100%;
+	// width: 100%;
 
 	i,
 	.text {
@@ -25,9 +45,9 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	i {
-		text-align: center;
+		// text-align: center;
 		@include media-breakpoint-up(md) {
-		    font-size: rem-calc(30);
+		    font-size: rem-calc(28);
 		}
 	}
 
@@ -81,13 +101,16 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-.stage-header h1,
-.stage-header h2 {
+// Because button tiles are in the hero for expertise
+
+.stage-header h1:not(.text),
+.stage-header h2:not(.text) {
 	color: white;
-	padding: rem-calc(70 0 10 0);
-	// border-bottom: 1px solid #DEDEDE;
-	// padding-bottom: rem-calc(15);
-	// margin-bottom: rem-calc(40);
+	padding: rem-calc(40 0 10 0);
+
+	@include media-breakpoint-up(md) {
+	    padding: rem-calc(70 0 10 0);
+	}
 }
 
 //-----------------------------------------------------------------

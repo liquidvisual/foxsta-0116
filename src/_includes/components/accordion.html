@@ -2,12 +2,12 @@
 	{% for i in (1..5) %}
 		<div class="panel panel-default">
 			<div class="panel-heading" role="tab" id="heading-{{i}}">
-				<h4 class="panel-title">
+				<h2 class="h4 panel-title">
 					<a class="collapsed" data-toggle="collapse" data-parent=".accordion" href="#collapse-{{i}}" aria-expanded="false" aria-controls="collapse-{{i}}">
-						Collapsible Group Item #{{i}}
+						Collapsible Group Item long name #{{i}}
 						<i class="fa fa-angle-up"></i>
 					</a>
-				</h4>
+				</h2>
 			</div>
 			<div aria-expanded="false" id="collapse-{{i}}" class="panel-body panel-collapse collapse" role="tabpanel" aria-labelledby="heading-{{i}}">
 				<div class="panel-body-inner">

@@ -46,6 +46,14 @@
 
 - title: Free Seminars
   url: /free-seminars/
+  include_children_in_nav: false
+  children:
+    - title: Family Law Seminars
+      url: /free-seminars/free-seminas-item/
+    - title: Will Challenge Seminars
+      url: /free-seminars/free-seminas-item/
+    - title: Estate Planning Seminars
+      url: /free-seminars/free-seminas-item/
 
 - title: Blog
   url: /blog/

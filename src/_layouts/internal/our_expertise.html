@@ -2,10 +2,12 @@
 layout: internal_hero_full
 ---
 
-<ul class="title-btns block-grid-xs-1 block-grid-lg-2">
-    {% for item in site.data.practices limit: 8 %}
+{% assign practices = site.data.sitemap[3].children %}
+
+<ul class="title-btns block-grid-xs-1 block-grid-md-2">
+    {% for item in practices %}
         <li>
-            {% include components/btn_tile_reduced.html title=item.title url="/our-expertise/our-expertise-item/" class="h3" %}
+            {% include components/btn_tile.html title=item.title url="/our-expertise/our-expertise-item/" %}
         </li>
     {% endfor %}
 </ul>

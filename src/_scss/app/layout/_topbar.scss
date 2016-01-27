@@ -1,7 +1,7 @@
 /*
     TOPBAR.CSS
 
-    - Last updated: 15.01.16
+    - Last updated: 25.01.16
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -142,9 +142,13 @@ body {
     color: white;
 }
 
+.topbar .active.has-dropdown:hover > .top-parent-anchor .text {
+    border-bottom: 0;
+}
+
 // UX decision, dropdowns are fiddly on tablets
 .topbar .has-dropdown:hover > .dropdown {
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
         opacity: 1;
         height: auto;
         overflow: visible;
@@ -226,6 +230,7 @@ body {
         transition: none; // UX decision
         font-size: rem-calc(13); // opinionated
         color: white;
+        padding: rem-calc(15 15);
     }
 }
 
@@ -239,9 +244,13 @@ body {
         border-top: 1px solid darken($primary-color, 5%); // optional
     }
 
-    .topbar .dropdown li:last-child a {
-        border-bottom: 0;
+    .topbar .dropdown {
+        border-bottom: 1px solid darken($primary-color, 5%); // optional
     }
+
+    // .topbar .dropdown li:last-child a {
+    //     border-bottom: 0;
+    // }
 }
 
 //=========================================

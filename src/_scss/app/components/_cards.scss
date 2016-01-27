@@ -98,6 +98,7 @@
 
 	.card-block {
 		background: #016273;
+		overflow: hidden;
 
 		li {
 			margin-bottom: rem-calc(5);
@@ -115,10 +116,39 @@
 
 	a {
 		// word-wrap: break-word;
+		word-wrap: break-all;
 		font-family: $font-family-serif;
 		// font-size: rem-calc(16);
 		font-weight: 600;
 		color: white;
+
+		@include media-breakpoint-down(lg) {
+			font-size: rem-calc(17);
+		    -ms-word-break: break-all;
+		    word-break: break-all;
+		    word-break: break-all;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// CARD CONTACT MORE
+//-----------------------------------------------------------------
+
+.card-contact {
+	@include media-breakpoint-up(md) {
+	    img {
+	    	width: rem-calc(160);
+	    	// height: 100px;
+	    	float: left;
+	    }
+	}
+
+	@include media-breakpoint-up(lg) {
+	    img {
+	    	width: 100%;
+	    	float: none;
+	    }
 	}
 }
 

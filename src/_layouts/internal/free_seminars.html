@@ -8,11 +8,14 @@ sidebar: "sidebar/sidebar_seminars.html"
 <div class="container">
     <div class="row">
         <div class="col-lg-8 pad-right-lg">
-            {{ content }}
 
-            <div class="spacer m-b-lg"></div>
+            <div class="wysiwyg">
+                {{ content }}
+            </div>
 
-            <h3 class="header-icon m-b-md"><i class="fa fa-comments-o m-b"></i><span class="text">Read more about our free seminars...</span></h3>
+            <div class="spacer m-b-md"></div>
+
+            <h3 class="header-icon m-b-md"><i class="fa fa-comments-o"></i><span class="text">Read more about our free seminars...</span></h3>
 
             <ul class="title-btns block-grid-xs-1">
                 {% for item in site.data.seminars %}

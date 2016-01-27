@@ -14,8 +14,8 @@
 
                 <!-- CONTACT DETAILS -->
                 <h4>{{ settings.company }}</h4>
-                <p>P: {{ settings.phone }}<br>
-                   F: {{ settings.fax }}<br>
+                <p>P: <a href="tel:{{ settings.phone }}">{{ settings.phone }}</a><br>
+                   F: <a href="tel:{{ settings.fax }}">{{ settings.fax }}</a><br>
                    E: <a href="mailto:{{ settings.email }}">{{ settings.email }}</a></p>
 
                 <p>{{ settings.offices[0].address }}<br>

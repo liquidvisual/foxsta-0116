@@ -12,15 +12,37 @@
 //-----------------------------------------------------------------
 
 .stage {
-	// padding: rem-calc(25 0 0 0);
+
+	> .container {
+		padding-top: rem-calc(50);
+
+		@include media-breakpoint-up(md) {
+		    padding-top: rem-calc(65);
+		}
+	}
+
+	//=========================================
+	// Sidebar
+	//=========================================
+
+	.sidebar,
+	> .container > .row > [class*="col"]:first-child {
+		margin-bottom: rem-calc(80);
+	}
+
+	.sidebar {
+		@include media-breakpoint-down(md) {
+		    padding-top: rem-calc(40);
+		}
+	}
+
+	//=========================================
+	//
+	//=========================================
 
 	@include media-breakpoint-down(sm) {
 	    width: 100%; // savior
 	    overflow: hidden; // IMPORTANT: stop scrollbars on mobile
-	}
-
-	@include media-breakpoint-up(md) {
-	    // padding: rem-calc(70 0 0 0);
 	}
 }
 

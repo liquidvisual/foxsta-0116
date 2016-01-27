@@ -6,7 +6,7 @@ hero: /img/content/hero-seminars.jpg
 breadcrumbs: true
 ---
 
-<p class="lead">Accredited Family Law Specialist Fidan Shevket and family law solicitor Inoka Ho present our Family Law seminars in various locations on the North Shore of Sydney.</p>
+## Accredited Family Law Specialist Fidan Shevket and family law solicitor Inoka Ho present our Family Law seminars in various locations on the North Shore of Sydney.
 
 Each seminar runs for approximately one hour and covers a range of issues including; Separation and divorce, parenting matters, child support, property settlement, spouse maintenance, drafting your Agreement and a range of other matters. There is an opportunity to ask questions during the seminar and at the conclusion of the seminar.
 

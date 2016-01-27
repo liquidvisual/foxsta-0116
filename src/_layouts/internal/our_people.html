@@ -4,25 +4,27 @@ layout: internal
 
 {% assign sections = site.data.sitemap[1].children[5].children %}
 
-{% for group in site.data.team %}
-	<section class="section {{ group.color }}">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-9">
+<div class="our-people-section-colors">
+	{% for group in site.data.team %}
+		<section class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9">
 
-					<h2>{{ group.title }}</h2>
-					<ul class="cards-list title-btns block-grid-xs-2 block-grid-md-4">
-					    {% for person in group.children | limit: 4 %}
-					        <li>
-					        	<a href="/our-people/our-people-item/" class="card-anchor">
-									{% include components/card_bio.html title=person.title subtitle=person.subtitle %}
-								</a>
-					        </li>
-					    {% endfor %}
-					</ul>
+						<h2 class="m-b-md">{{ group.title }}</h2>
+						<ul class="cards-list title-btns block-grid-xs-2 block-grid-md-4">
+						    {% for person in group.children | limit: 4 %}
+						        <li>
+						        	<a href="/our-people/our-people-item/" class="card-anchor">
+										{% include components/card_bio.html title=person.title subtitle=person.subtitle %}
+									</a>
+						        </li>
+						    {% endfor %}
+						</ul>
 
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-{% endfor %}
+		</section>
+	{% endfor %}
+</div>

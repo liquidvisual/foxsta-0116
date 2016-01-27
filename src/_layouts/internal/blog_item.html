@@ -17,13 +17,16 @@ sidebar: sidebar/sidebar_blog_item.html
             	</div>
             	<div class="media-body">
             		<h1 class="media-heading card-title h2">{{ article.title }}</h1>
-            		<date>{{ article.date | date: "%d %B %Y" | upcase }}</date> <span class="media-heading-subtitle">COMMERCIAL &amp; BUSINESS LAW</span>
+            		<date>{{ article.date | date: "%d %B %Y" | upcase }}</date>
+                    <span class="media-heading-subtitle">COMMERCIAL &amp; BUSINESS LAW</span>
             	</div>
             </div>
 
             <img width="395" class="image-right" src="/img/ui/placeholder.png">
 
-            {{ content | markdownify }}
+            <div class="wysiwyg">
+                {{ content }}
+            </div>
 
         </div>
         <div class="col-lg-4 pad-left-lg">
