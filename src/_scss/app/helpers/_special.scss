@@ -33,7 +33,20 @@
 	}
 }
 
-// used by weird form
+// not used anymore - keep for later
+.p-l-0-md-down {
+	@include media-breakpoint-down(md) {
+	    padding-left: 0;
+	}
+}
+
+// used by callback form
+.p-l-0-md-only {
+	@media #{$md-only} {
+	    padding-left: 0;
+	}
+}
+
 .p-l-0-md-down {
 	@include media-breakpoint-down(md) {
 	    padding-left: 0;
@@ -45,7 +58,8 @@
 //-----------------------------------------------------------------
 
 .special-fill {
-	content: "";
+	// content: "";
+	display: none;
 	position: absolute;
 	top: -62px;
 	left: -100%;

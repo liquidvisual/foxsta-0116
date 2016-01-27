@@ -28,9 +28,7 @@ sidebar: "sidebar/sidebar_people_item.html"
         </div>
         <div class="col-lg-4 pad-left-lg">
             <aside class="sidebar inverse">
-                {% if page.sidebar %}
-                    {% include {{ page.sidebar }} %}
-                {% endif %}
+                {% include components/card_contact.html %}
             </aside>
         </div>
     </div>

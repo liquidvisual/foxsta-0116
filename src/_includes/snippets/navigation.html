@@ -26,7 +26,7 @@
 	{% comment %} 1st Level {% endcomment %}
 	{% for item in sitemap | offset: 1 %}
 	{% assign active_path = item.title | downcase | slugify %}
-	<li class="{{ item.theme }}{% for path in url_paths %}{% if path == active_path %} active {% endif %}{% endfor %}{% if item.children %} has-dropdown {% endif %} {% if forloop.last %} last-child {% endif %}">
+	<li class="{{ item.theme }}{% for path in url_paths %}{% if path == active_path %} active {% endif %}{% endfor %}{% if item.children %} has-dropdown {% endif %} {% if forloop.index >= 4 %} right-align {% endif %}">
 
 		{% comment %} Parent triggers submenu instead of link when it passes a HASH {% endcomment %}
 		{% if item.url == "#" %}

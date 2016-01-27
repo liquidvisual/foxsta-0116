@@ -21,12 +21,17 @@
 	ul,
 	ul ul {
 		padding: 0;
+		list-style: none;
 	}
 
 	li {
 		padding: 0;
 		background: #026274;
-		border-bottom: 1px solid #116C7D;
+		border-top: 1px solid #116C7D;
+	}
+
+	> li:first-child {
+		border-top: 0;
 	}
 
 	li > a {

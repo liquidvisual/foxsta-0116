@@ -1,8 +1,9 @@
 /*
     TOPBAR.CSS
 
-    - Last updated: 25.01.16
+    - Last updated: 27.01.16
     - liquidvisual.com
+    - Updated dropdowns to be more reliable
 */
 //-----------------------------------------------------------------
 // Variables
@@ -152,6 +153,7 @@ body {
         opacity: 1;
         height: auto;
         overflow: visible;
+        visibility: visible;
     }
 }
 
@@ -171,6 +173,7 @@ body {
     @include media-breakpoint-up(md) {
         opacity: 1;
         height: auto;
+        visibility: visible;
     }
 }
 
@@ -194,10 +197,12 @@ body {
     background: #04A1B4;
     border-radius: 0 0 $global-radius $global-radius;
     border-top: 8px solid $primary-color;
+    box-shadow: 0 1px 1px 0px rgba(0,0,0,.2);
+    visibility: hidden;
 }
 
 // Prevent far-right dropdown from exceeding page width
-.topbar .last-child .dropdown {
+.topbar .right-align .dropdown {
     right: 0;
     left: auto;
 }
@@ -213,7 +218,7 @@ body {
 }
 
 // Prevent far-right 'nested' dropdown from exceeding page width
-.topbar .last-child .dropdown .dropdown {
+.topbar .right-align .dropdown .dropdown {
     left: -100%;
 }
 

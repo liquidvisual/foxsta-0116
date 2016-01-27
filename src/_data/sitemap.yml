@@ -33,27 +33,27 @@
           url: /our-expertise/our-expertise-item/our-expertise-item-item/
 
     - title: Family Law & Defacto Relationships
-      url: /services/
+      url: /our-expertise/our-expertise-item/
     - title: Litigation
-      url: /services/
+      url: /our-expertise/our-expertise-item/
     - title: Property Law & Conveyancing
-      url: /services/
+      url: /our-expertise/our-expertise-item/
     - title: Wills, Deceased Estates & Estate Planning
-      url: /services/
+      url: /our-expertise/our-expertise-item/
     - title: Estate Disputes
-      url: /services/
+      url: /our-expertise/our-expertise-item/
 
 
 - title: Free Seminars
   url: /free-seminars/
-  include_children_in_nav: false
+  include_children_in_nav: true
   children:
     - title: Family Law Seminars
-      url: /free-seminars/free-seminas-item/
+      url: /free-seminars/free-seminars-item/
     - title: Will Challenge Seminars
-      url: /free-seminars/free-seminas-item/
+      url: /free-seminars/free-seminars-item/
     - title: Estate Planning Seminars
-      url: /free-seminars/free-seminas-item/
+      url: /free-seminars/free-seminars-item/
 
 - title: Blog
   url: /blog/

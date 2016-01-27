@@ -125,6 +125,15 @@ body {
             #{map-get($grid-breakpoints, xl)}";
 }
 
+// SPECIFIC ADDED
+// $md-only: "#{screen and (min-width:) and (max-width:)";
+
+
+$xs-only: "screen and (min-width: #{map-get($grid-breakpoints, xs)}) and (max-width: #{map-get($grid-breakpoints, sm)})";
+$sm-only: "screen and (min-width: #{map-get($grid-breakpoints, sm)}) and (max-width: #{map-get($grid-breakpoints, md)})";
+$md-only: "screen and (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)})";
+$lg-only: "screen and (min-width: #{map-get($grid-breakpoints, lg)}) and (max-width: #{map-get($grid-breakpoints, xl)})";
+
 // // Grid columns
 // //
 // // Set the number of columns and specify the width of the gutters.

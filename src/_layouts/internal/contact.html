@@ -37,9 +37,9 @@ sidebar: "sidebar/sidebar_contact.html"
         </div>
         <div class="col-lg-4 pad-left-lg">
             <aside class="sidebar inverse">
-                {% if page.sidebar %}
-                    {% include {{ page.sidebar }} %}
-                {% endif %}
+                <!-- SEND US AN ENQUIRY -->
+                <h3 class="m-b">Send us an enquiry</h3>
+                {% include components/form_basic.html %}
             </aside>
         </div>
     </div>

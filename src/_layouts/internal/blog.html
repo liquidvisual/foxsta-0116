@@ -20,9 +20,18 @@ sidebar: sidebar/sidebar_blog.html
         </div>
         <div class="col-lg-4 pad-left-lg">
             <aside class="sidebar inverse">
-                {% if page.sidebar %}
-                    {% include {{ page.sidebar }} %}
-                {% endif %}
+
+                <h3 class="header-icon m-b-md"><i class="fa fa-list"></i><span class="text">Blog Categories</span></h3>
+                <hr class="m-b-md">
+                <ul class="list-unstyled">
+                    {% for item in site.data.blog_categories %}
+                        <li><a class="font-family-sans-serif" href="#">{{ item.title }}</a></li>
+                    {% endfor %}
+                </ul>
+                <div class="spacer m-b-md"></div>
+                <div class="spacer m-b-md"></div>
+                {% include components/form_callback.html %}
+
             </aside>
         </div>
     </div>

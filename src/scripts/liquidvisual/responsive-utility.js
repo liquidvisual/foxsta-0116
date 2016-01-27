@@ -53,7 +53,7 @@
         $tableElement = '<table class="table breakpoints-table" style="width: 300px;">'+tableString+'</table>';
         $('[data-js="lv-responsive-table"]').append($tableElement);
 
-        console.log(breakpoints);
+        // console.log(breakpoints);
     };
 
     getBreakpoints();

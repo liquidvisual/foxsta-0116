@@ -19,14 +19,6 @@ h1, h2, h3, h4, h5, h6 {
 // Hack to replace p.leads with H2s
 //-----------------------------------------------------------------
 
-.wysiwyg h2 {
-	font-family: $font-family-serif;
-	margin-bottom: rem-calc(30);
-	font-size: $lead-font-size;
-	font-weight: normal;
-
-}
-
 .spacer {
 	height: 1px;
 }

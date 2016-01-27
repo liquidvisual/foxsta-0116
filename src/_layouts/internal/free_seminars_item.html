@@ -33,9 +33,13 @@ sidebar: sidebar/sidebar_seminars_item.html
         </div>
         <div class="col-lg-4 pad-left-lg">
             <aside class="sidebar inverse">
-                {% if page.sidebar %}
-                    {% include {{ page.sidebar }} %}
-                {% endif %}
+
+                <!-- FREE SEMINARS -->
+                <h3 class="header-icon m-b-md"><i class="fa fa-calendar-o m-b"></i><span class="text">Upcoming Family Law Seminars</span></h3>
+                {% include components/seminar_listing.html class="has-font-reduced" %}
+                <div class="spacer m-b-lg"></div>
+                {% include components/card_contact_advanced.html %}
+
             </aside>
         </div>
     </div>
