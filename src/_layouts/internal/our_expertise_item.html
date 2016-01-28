@@ -6,9 +6,10 @@ layout: internal_hero_advanced
 
 <section class="section">
 	<div class="container">
-		<h3 id="our-commercial-and-business-law-services" class="header-icon m-b-md"><i class="fa fa-files-o"></i><span class="text">Our commercial &amp; business law services</span></h3>
+		<h2 id="our-commercial-and-business-law-services" class="header-icon m-b-md"><i class="fa fa-files-o"></i><span class="text">Our commercial &amp; business law services</span></h2>
+		<br>
 
-		<ul class="title-btns block-grid-xs-1 block-grid-lg-3">
+		<ul class="title-btns block-grid-xs-1 block-grid-md-2 block-grid-lg-3">
 		    {% for item in site.data.practices limit: 8 %}
 		        <li>
 		            {% include components/btn_tile_reduced.html title=item.title url=item.url class="h3" %}
@@ -23,8 +24,8 @@ layout: internal_hero_advanced
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-9">
-
 				<h2 class="header-icon m-b-md"><i class="fa fa-users"></i> <span class="text">{{ team_group.title }}</span></h2>
+				<br>
 				<ul class="cards-list title-btns block-grid-xs-2 block-grid-md-4">
 				    {% for person in team_group.children | limit: 4 %}
 				        <li>
@@ -34,7 +35,6 @@ layout: internal_hero_advanced
 				        </li>
 				    {% endfor %}
 				</ul>
-
 			</div>
 		</div>
 	</div>
@@ -43,12 +43,13 @@ layout: internal_hero_advanced
 <!-- RECENT BLOGS -->
 <section class="section brand-primary inverse">
 	<div class="container">
-		<h2 class="header-icon m-b-lg"><i class="fa fa-newspaper-o"></i> <span class="text">Recent Blogs - Commercial &amp; Business Law</span></h2>
+		<h2 class="header-icon m-b-md"><i class="fa fa-newspaper-o"></i> <span class="text">Recent Blogs - Commercial &amp; Business Law</span></h2>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 pad-right-md">
-					<ul class="block-grid-lg-1 block-list m-b-md">
+		<!-- ENTRIES SPLIT INTO 2 COLUMNS -->
+		<div class="row">
+			{% for i in (1..2) %}
+				<div class="col-lg-6 pad-right-lg">
+					<ul class="block-list block-grid-xs-1">
 						{% for item in site.data.articles limit: 2 %}
 							<li>
 								{% include components/media_entry.html %}
@@ -56,18 +57,10 @@ layout: internal_hero_advanced
 						{% endfor %}
 					</ul>
 				</div>
-				<div class="col-md-6 pad-left-md">
-					<ul class="block-grid-lg-1 block-list m-b-md">
-						{% for item in site.data.articles limit: 2 offset: 2 %}
-							<li>
-								{% include components/media_entry.html %}
-							</li>
-						{% endfor %}
-					</ul>
-				</div>
-			</div>
+			{% endfor %}
 		</div>
 
+		<br>
 		<p class="text-right m-b-0"><a href="#" class="btn btn-primary btn-text">Read more blogs <i class="fa fa-angle-right"></i></a></p>
 	</div>
 </section>

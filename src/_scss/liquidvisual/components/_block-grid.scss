@@ -1,7 +1,7 @@
 /*
     BLOCK-GRID.CSS
 
-    - updated: 30.10.15
+    - updated: 28.01.16
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -64,11 +64,19 @@
 }
 
 //=========================================
+// Clear Negative Margins
+//=========================================
+
+@mixin set-margins($unit) {
+  margin: $unit;
+}
+
+//=========================================
 // Multiple
 //=========================================
 
 @mixin block-grids($size) {
-  .block-grid-#{$size}-1  { @include block-grid(1);  }
+  .block-grid-#{$size}-1  { @include block-grid(1); @include set-margins(0) }
   .block-grid-#{$size}-2  { @include block-grid(2);  }
   .block-grid-#{$size}-3  { @include block-grid(3);  }
   .block-grid-#{$size}-4  { @include block-grid(4);  }
