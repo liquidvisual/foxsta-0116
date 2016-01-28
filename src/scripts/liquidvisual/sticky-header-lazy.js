@@ -50,21 +50,40 @@
 		wScrollCurrent	= $window.scrollTop();
 		wScrollDiff		= wScrollBefore - wScrollCurrent;
 
-		if( wScrollCurrent <= 0 ) // scrolled to the very top; element sticks to the top
-			$element.removeClass( elClassHidden );
+		var header = $('.global-header');
+		var headerHeight = header.position().top + header.outerHeight(true);
 
-		else if( wScrollDiff > 0 && $element.hasClass( elClassHidden ) ) // scrolled up; element slides in
-			$element.removeClass( elClassHidden );
+		console.log(wScrollCurrent <= headerHeight);
 
-		else if( wScrollDiff < 0 ) // scrolled down
-		{
-			if( wScrollCurrent + wHeight >= dHeight && $element.hasClass( elClassHidden ) ) // scrolled to the very bottom; element slides in
-				$element.removeClass( elClassHidden );
-
-			else // scrolled down; element slides out
-				$element.addClass( elClassHidden );
+		if (wScrollCurrent > headerHeight) {
+			$element.addClass('is-compact');
+		} else {
+			$element.removeClass('is-compact')
 		}
 
+
+		// IF SCROLLED UP PAST HEADER
+		if ( wScrollCurrent <= 0 ) {
+			$element.removeClass(elClassHidden);
+		}
+
+		// IF SCROLLING UP - SHOW BAR
+		if (wScrollDiff > headerHeight && $element.hasClass(elClassHidden)) {
+			$element.removeClass(elClassHidden);
+		}
+
+		// SCROLLING DOWN - HIDE BAR
+		else if (wScrollDiff < 0) {
+
+			// HIT BOTTOM
+			if (wScrollCurrent + wHeight >= dHeight && $element.hasClass( elClassHidden ) && wScrollDiff < headerHeight) {
+				// $element.removeClass( elClassHidden );
+
+			// NOT BOTTOM - SHOW BAR
+			} else {
+				$element.addClass( elClassHidden );
+			}
+		}
 		wScrollBefore = wScrollCurrent;
 	}));
 

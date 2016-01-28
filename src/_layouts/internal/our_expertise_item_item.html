@@ -1,17 +1,16 @@
 ---
 layout: internal
-sidebar: sidebar/sidebar_expertise.html
 ---
 
 <div class="container">
     <div class="row">
         <div class="col-lg-8 pad-right-lg">
 
-            <div class="wysiwyg">
+            <!-- WYSIWYG -->
+            <div class="wysiwyg m-b-lg">
                 {{ content }}
             </div>
 
-            <div class="spacer m-b-md"></div>
 			{% include components/accordion.html %}
 
         </div>
@@ -20,7 +19,7 @@ sidebar: sidebar/sidebar_expertise.html
 
                 {% assign side_nav = site.data.sitemap[3].children %}
 
-                <ul class="side-nav">
+                <ul class="side-nav m-b-lg">
                     {% for item in side_nav limit: 1 %}
                         <li><a href="#">{{ item.title }}</a>
                             <ul>
@@ -31,8 +30,6 @@ sidebar: sidebar/sidebar_expertise.html
                         </li>
                     {% endfor %}
                 </ul>
-
-                <div class="spacer m-b-lg"></div>
 
                 {% include components/form_callback.html %}
 

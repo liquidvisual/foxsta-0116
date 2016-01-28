@@ -8,6 +8,16 @@
 // Variables
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
+// Card Extensions
+//-----------------------------------------------------------------
+
+.card {
+    position: relative;
+    overflow: hidden;
+    // margin-bottom: 0;
+}
+
+//-----------------------------------------------------------------
 // Cards
 //-----------------------------------------------------------------
 
@@ -64,37 +74,13 @@
 }
 
 //-----------------------------------------------------------------
-// Card Extensions
-//-----------------------------------------------------------------
-
-// .card {
-//     position: relative;
-//     overflow: hidden;
-//     margin-bottom: 0;
-
-//     .card-block {
-//     	overflow: hidden;
-//     	// min-height: rem-calc(220);
-//     }
-
-//     date {
-//     	color: #646565;
-//     }
-
-//     .btn {
-// 		position: absolute;
-// 		bottom: rem-calc(10);
-// 		right: rem-calc(10);
-//     }
-// }
-
-//-----------------------------------------------------------------
 // Card Contact
 //-----------------------------------------------------------------
 
 .card-contact {
 	border: 0;
 	color: white;
+	background: none;
 
 	.card-block {
 		background: #016273;
@@ -135,20 +121,18 @@
 // CARD CONTACT MORE
 //-----------------------------------------------------------------
 
+// On PORTRAIT ONLY - allow all of card to be coloured
 .card-contact {
-	@include media-breakpoint-up(md) {
-	    img {
-	    	width: rem-calc(160);
-	    	// height: 100px;
-	    	float: left;
-	    }
+	@media #{$md-only} {
+		background: #016273;
 	}
 
-	@include media-breakpoint-up(lg) {
-	    img {
-	    	width: 100%;
-	    	float: none;
-	    }
+	img {
+		@media #{$md-only} {
+			width: auto;
+			height: rem-calc(190);
+			float: left;
+		}
 	}
 }
 
@@ -189,56 +173,6 @@
 		right: rem-calc(10);
 		font-size: rem-calc(30);
 		color: #807E7E;
-	}
-}
-
-//-----------------------------------------------------------------
-// Cards Collapse on SM only
-//-----------------------------------------------------------------
-
-.cards-collapse-xs {
-	@include media-breakpoint-down(sm) {
-
-		li {
-			padding: 0;
-		}
-
-		li:first-child .card {
-			border-top: 0;
-		}
-
-		.card {
-			display: table;
-			margin: rem-calc(-1px -10);
-			padding: rem-calc(20 25);
-			border-width: 1px;
-			border-left: 0;
-			border-right: 0;
-			border-bottom: 0;
-
-			.btn {
-				width: 100%;
-				position: static; // override
-			}
-		}
-
-		.card-head,
-		.card-block {
-			display: table-cell;
-			vertical-align: top;
-		}
-
-		.card-head {
-			width: rem-calc(110);
-		}
-
-		.card-block {
-			padding: rem-calc(0 20);
-		}
-
-		.card-text {
-			min-height: 0;
-		}
 	}
 }
 

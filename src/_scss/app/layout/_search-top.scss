@@ -14,7 +14,7 @@
 // but appear in the header on desktop
 //-----------------------------------------------------------------
 
-.contact-info {
+.search-top {
 	@include media-breakpoint-up(lg) {
 	    position: absolute;
 	    top: rem-calc(15);
@@ -47,7 +47,7 @@
 // Offcanvas Hit
 //-----------------------------------------------------------------
 
-.contact-info a {
+.search-top a {
 	font-size: rem-calc(18);
 }
 
@@ -55,7 +55,7 @@
 // Icons
 //-----------------------------------------------------------------
 
-.contact-info .fa {
+.search-top .fa {
 	margin-right: 8px;
 	margin-bottom: 15px;
     width: 26px;
@@ -68,7 +68,7 @@
     float: left;
 }
 
-.off-canvas-menu .contact-info .fa {
+.off-canvas-menu .search-top .fa {
 	background: darken($brand-secondary, 6%);
 }
 

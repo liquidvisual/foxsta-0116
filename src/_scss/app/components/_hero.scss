@@ -14,6 +14,10 @@
 .lv-hero {
 	position: relative;
 	// height: 890px;
+
+	@include media-breakpoint-down(sm) {
+	    background-position: 1000px 100px;
+	}
 }
 
 .lv-hero-item {

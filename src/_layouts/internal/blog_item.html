@@ -1,9 +1,7 @@
 ---
 layout: internal
-sidebar: sidebar/sidebar_blog_item.html
 ---
 
-{% assign sections = site.data.sitemap[5].children %}
 {% assign news = site.data.articles %}
 {% assign article = site.data.articles[0] %}
 
@@ -24,6 +22,7 @@ sidebar: sidebar/sidebar_blog_item.html
 
             <img width="395" class="image-right" src="/img/ui/placeholder.png">
 
+            <!-- WYSIWYG -->
             <div class="wysiwyg">
                 {{ content }}
             </div>

@@ -14,30 +14,22 @@
 // Split Section
 //-----------------------------------------------------------------
 
-// .split-sectionX {
+.bg-fill-homepage:after {
+	@include media-breakpoint-down(sm) {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -100%;
+		right: 0;
+		bottom: 0;
+		width: 99999%;
+		height: 100%;
+		z-index: -1;
+		background: darken($brand-secondary, 3%);
+	}
+}
 
-// 	[class*="col"]:nth-child(2) {
-// 		position: relative;
-// 	}
-
-.bg-fill-homepage {
+.homepage-content-footer {
 	position: relative;
-
-	.section {
-		z-index: 2;
-	}
-
-	&:before {
-		@include media-breakpoint-down(sm) {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: -100%;
-			bottom: 0;
-			width: 99999%;
-			height: 100%;
-			// z-index: -1;
-			background: red; //$brand-primary;
-		}
-	}
+	z-index: 1;
 }

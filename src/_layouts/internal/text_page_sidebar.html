@@ -2,8 +2,6 @@
 layout: internal
 ---
 
-{% assign sections = site.data.sitemap[1].children[5].children %}
-
 <div class="container">
     <div class="row">
         <div class="col-lg-8 pad-right-lg">
@@ -11,9 +9,7 @@ layout: internal
         </div>
         <div class="col-lg-4 pad-left-md">
             <aside class="sidebar inverse">
-				{% if page.sidebar %}
-				    {% include {{ page.sidebar }} %}
-				{% endif %}
+
             </aside>
         </div>
     </div>

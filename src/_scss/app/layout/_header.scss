@@ -17,7 +17,6 @@ $header-height-lg: 180px !default;
 //-----------------------------------------------------------------
 
 .global-header {
-
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -26,36 +25,69 @@ $header-height-lg: 180px !default;
 	background-color: rgba(white, 0.9);
 	font-family: $font-family-sans-serif;
 	font-weight: 600;
-	box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.2);
-	border-bottom: 0.5px solid rgba(0, 0, 0, 0.2); // iphone 6, stupid
 	z-index: 1000;
+
+	@include media-breakpoint-down(lg) {
+	    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.2);
+	    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2); // iphone 6, stupid
+	}
 
 	@include media-breakpoint-up(md) {
 	    height: $header-height-md;
 	}
 
-	@include media-breakpoint-up(lg) {
-	    // height: $header-height-lg;
-	    // position: absolute;
-	    box-shadow: none;
-	}
-
 	@include media-breakpoint-up(xl) {
 		height: $header-height-lg;
+		// box-shadow: none;
+		background: white;
 	}
 }
 
 //-----------------------------------------------------------------
-// Logged In
+// Header Compact
 //-----------------------------------------------------------------
 
-.logged-in .global-header {
-	top: 60px;
+.global-header.is-compact {
+	box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.2);
+	border-bottom: 0.5px solid rgba(0, 0, 0, 0.2); // iphone 6, stupid
+
+	@include media-breakpoint-up(xl) {
+		height: rem-calc(120);
+
+		.global-navigation {
+			top: rem-calc(-38);
+		}
+	    .search-top {
+	    	opacity: 0;
+	    }
+	    .logo {
+	    	top: rem-calc(20);
+		}
+		.logo img {
+			width: rem-calc(160);
+		}
+	}
 }
 
-.logged-in .lv-page {
-	margin-top: 60px;
-}
+// .scrolling-up .global-header {
+// 	position: fixed;
+// 	height: rem-calc(120);
+
+// 	@include media-breakpoint-up(xl) {
+// 		.global-navigation {
+// 			top: rem-calc(-38);
+// 		}
+// 	    .search-top {
+// 	    	opacity: 0;
+// 	    }
+// 	    .logo {
+// 	    	top: rem-calc(20);
+// 		}
+// 		.logo img {
+// 			width: rem-calc(160);
+// 		}
+// 	}
+// }
 
 //-----------------------------------------------------------------
 // Logo
@@ -114,11 +146,3 @@ $header-height-lg: 180px !default;
 //=========================================
 //
 //=========================================
-
-// .hamburger {
-// 	@include hamburger($width: 28px, $gap: 6px, $thickness: 5px, $color: #383E44);
-
-// 	@include media-breakpoint-up(md) {
-// 	    @include hamburger($width: 28px, $gap: 5px, $thickness: 5px, $color: #383E44);
-// 	}
-// }

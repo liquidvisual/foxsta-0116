@@ -2,15 +2,12 @@
 layout: internal
 ---
 
-{% assign sections = site.data.sitemap[1].children[5].children %}
-
 <div class="our-people-section-colors">
 	{% for group in site.data.team %}
 		<section class="section">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-9">
-
 						<h2 class="m-b-md">{{ group.title }}</h2>
 						<ul class="cards-list title-btns block-grid-xs-2 block-grid-md-4">
 						    {% for person in group.children | limit: 4 %}
@@ -21,7 +18,6 @@ layout: internal
 						        </li>
 						    {% endfor %}
 						</ul>
-
 					</div>
 				</div>
 			</div>

@@ -33,23 +33,35 @@
 		wScrollDiff		= wScrollBefore - wScrollCurrent;
 		elTop			= parseInt( $element.css( 'top' ) ) + wScrollDiff;
 
-		if( wScrollCurrent <= 0 ) // scrolled to the very top; element sticks to the top
-			$element.css( 'top', 0 );
+		var header = $('.global-header');
+		var headerHeight = header.position().top + header.outerHeight(true);
 
-		else if( wScrollDiff > 0 ) // scrolled up; element slides in
-			$element.css( 'top', elTop > 0 ? 0 : elTop );
-
-		else if( wScrollDiff < 0 ) // scrolled down
-		{
-			if( wScrollCurrent + wHeight >= dHeight - elHeight )  // scrolled to the very bottom; element slides in
-				console.log('');
-				//$element.css( 'top', ( elTop = wScrollCurrent + wHeight - dHeight ) < 0 ? elTop : 0 );
-
-			else // scrolled down; element slides out
-				$element.css( 'top', Math.abs( elTop ) > elHeight ? -elHeight : elTop );
+		// SCROLLED TO TOP - BAR STUCK
+		if (wScrollCurrent <= 0) {
+			$element.removeClass('is-compact').css( 'top', 0);
 		}
+		// SCROLLS UP - BAR SLIDES UP
+		else if (wScrollDiff > 0) {
+			$element.addClass('is-compact').css( 'top', elTop > 0 ? 0 : elTop );
+		}
+		// SCROLL DOWN
+		else if (wScrollDiff < 0) {
+			// HITS BOTTOM - BAR SLIDES IN
+			if (wScrollCurrent + wHeight >= dHeight - elHeight) {
+				$element.css( 'top', ( elTop = wScrollCurrent + wHeight - dHeight ) < 0 ? elTop : 0 );
 
+			} else { // SCROLL DOWN - BAR SLIDES IN
+				$element.css( 'top', Math.abs( elTop ) > elHeight ? -elHeight : elTop);
+			}
+		}
 		wScrollBefore = wScrollCurrent;
+
+		// CHECK FOR WINDOW PAST HEADER
+		if (wScrollCurrent > headerHeight) {
+			$element.addClass('is-compact');
+		} else {
+			$element.removeClass('is-compact')
+		}
 	});
 
 })( jQuery, window, document );

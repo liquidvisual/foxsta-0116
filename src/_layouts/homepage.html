@@ -11,14 +11,14 @@ layout: master
 <!-- STAGE -->
 <section class="stage">
 
-	<!-- SPLIT SECTION -->
-	<section class="split-section">
+	<!-- RECENT BLOGS / FREE SEMINARS -->
+	<section>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 pad-right-lg">
 
 					<!-- RECENT BLOGS -->
-					<div class="section p-b-0">
+					<div class="p-t-lg p-b-md">
 						<h2 class="underline m-b-0"><i class="fa fa-newspaper-o"></i>&nbsp; Recent Blogs</h2>
 						<ul class="block-list">
 							{% for item in site.data.articles limit: 3 %}
@@ -30,9 +30,10 @@ layout: master
 						<div class="spacer m-b-lg hidden-sm-down"></div>
 						<p class="text-right"><a href="/blog/" class="btn btn-primary btn-text">Read more blogs <i class="fa fa-angle-right"></i></a></p>
 					</div>
+
 				</div>
 				<div class="col-lg-6 pad-left-lg">
-					<aside class="sidebar section inverse p-b-0">
+					<aside class="sidebar inverse p-t-lg p-b-md m-b-0">
 
 						<!-- FREE SEMINARS -->
 						<h2 class="underline"><i class="fa fa-comments-o"></i>&nbsp; Free Seminars</h2>
@@ -41,6 +42,7 @@ layout: master
 						{% include components/seminar_listing.html %}
 						<div class="spacer m-b-lg hidden-sm-down"></div>
 						<p class="text-right"><a href="/free-seminars/" class="btn btn-primary btn-text">Read more about our free seminars <i class="fa fa-angle-right"></i></a></p>
+
 					</aside>
 				</div>
 			</div>
@@ -48,11 +50,11 @@ layout: master
 	</section>
 
 	<!-- OUR PEOPLE / OUR FIRM -->
-	<section class="section p-y-0 brand-secondary">
+	<section class="homepage-content-footer section p-y-0 brand-secondary">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 pad-right-md">
-					<div class="section">
+					<div class="p-t-lg p-b">
 						<h2><i class="fa fa-users"></i>&nbsp; Our People</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -60,11 +62,11 @@ layout: master
 						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<p class="text-right"><a href="#" class="btn btn-primary btn-text">Meet our team <i class="fa fa-angle-right"></i></a></p>
+						<p class="text-right"><a href="/our-people/" class="btn btn-primary btn-text">Meet our team <i class="fa fa-angle-right"></i></a></p>
 					</div>
 				</div>
 				<div class="col-md-6 pad-left-md bg-fill-homepage">
-					<div class="section">
+					<div class="p-t-lg p-b">
 						<h2><i class="fa fa-align-left"></i>&nbsp; Our Firm</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -73,7 +75,7 @@ layout: master
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<p class="text-right"><a href="#" class="btn btn-primary btn-text">Read more <i class="fa fa-angle-right"></i></a></p>
+						<p class="text-right"><a href="/about/" class="btn btn-primary btn-text">Read more <i class="fa fa-angle-right"></i></a></p>
 					</div>
 				</div>
 			</div>

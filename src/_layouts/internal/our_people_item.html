@@ -1,32 +1,31 @@
 ---
 layout: internal
-sidebar: "sidebar/sidebar_people_item.html"
 ---
-
-{% assign sections = site.data.sitemap[1].children[5].children %}
 
 <div class="container">
     <div class="row">
         <div class="col-lg-8 pad-right-lg">
 
-            <div class="wysiwyg">
+            <div class="hidden-md-up m-b-lg">
+                {% include components/card_contact.html %}
+            </div>
+
+            <!-- WYSIWYG -->
+            <div class="wysiwyg m-b-lg">
                 {{ content }}
             </div>
 
-            <div class="spacer m-b-lg"></div>
-
             <h3 class="header-icon m-b-md"><i class="fa fa-comments-o"></i><span class="text">Read more about our free seminars...</span></h3>
 
-            <ul class="title-btns block-grid-xs-1 block-grid-md-2">
+            <ul class="title-btns block-grid-xs-1 block-grid-md-2 m-b-lg">
                 {% for item in site.data.practices | limit: 4 %}
                     <li>
                         {% include components/btn_tile_reduced.html title=item.title url=item.url class="h5" %}
                     </li>
                 {% endfor %}
             </ul>
-            <div class="m-b-lg"></div>
         </div>
-        <div class="col-lg-4 pad-left-lg">
+        <div class="col-lg-4 pad-left-lg hidden-sm-down">
             <aside class="sidebar inverse">
                 {% include components/card_contact.html %}
             </aside>
