@@ -5,8 +5,16 @@
 <div class="card-contact">
 	<hr>
 		<ul class="list-inline">
-			<li><i class="fa fa-phone"></i><a class="h5" href="tel:{{ settings.phone }}">{{ settings.phone }}</a></li>
-			<li><i class="fa fa-envelope"></i><a class="h5" href="mailto:{{ settings.email }}">{{ settings.email }}</a></li>
+			<li class="left">
+				<span class="text">
+					<i class="fa fa-phone"></i><a class="h5" href="tel:{{ settings.phone }}">{{ settings.phone }}</a>
+				</span>
+			</li>
+			<li class="right">
+				<span class="text">
+					<i class="fa fa-envelope"></i><a class="h5" href="mailto:{{ settings.email }}">{{ settings.email }}</a>
+				</span>
+			</li>
 		</ul>
 	<hr>
 </div>

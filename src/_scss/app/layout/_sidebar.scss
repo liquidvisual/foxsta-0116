@@ -62,7 +62,7 @@
 	 	color: white;
 	 }
 
-	 a:hover {
+	 a:not(.btn):hover {
  		@include media-breakpoint-up(xl) {
  		    color: lighten($brand-secondary, 10%);
  		}

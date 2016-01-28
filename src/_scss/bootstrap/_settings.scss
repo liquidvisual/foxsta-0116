@@ -239,7 +239,7 @@ $table-border-color:            #E0E0E2; //$gray-lighter !default;
 
 // $btn-padding-x:                  1rem !default;
 // $btn-padding-y:                  .375rem !default;
-// $btn-font-weight:                normal !default;
+$btn-font-weight:                bold; //normal !default;
 
 // $btn-primary-color:              #fff !default;
 $btn-primary-bg:                    darken($gray-dark, 2%); //$brand-primary !default;

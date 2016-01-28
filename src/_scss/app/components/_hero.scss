@@ -66,6 +66,10 @@
 		border-color: #5EC8D5 !important; // fix later
 	}
 
+	.card-contact {
+		background: none;
+	}
+
 	.card-contact i {
 		// font-size: rem-calc(28);
 		width: auto;
@@ -74,22 +78,38 @@
 
 	.stage-header {
 		position: static;
-		padding: rem-calc(70 0 90 0);
-		margin: rem-calc(275 0 90 0);
+		padding: rem-calc(30 0 30 0);
+		margin: rem-calc(90 0 90 0);
 
-		.pad-left-lg {
+		@include media-breakpoint-up(md) {
+		    padding: rem-calc(70 0 70 0);
+		    margin: rem-calc(275 0 90 0);
+		}
+
+		// CHEATING HERE
+		.pad-left-md {
 			@include media-breakpoint-up(xl) {
 			    padding-left: rem-calc(130);
 			}
 		}
 
-		.pad-right-lg {
+		.pad-right-md {
 			@include media-breakpoint-up(lg) {
 			    padding-right: rem-calc(10);
 			}
 		}
 
+		//=========================================
+		// List Inline - phone and email
+		//=========================================
 
+		.list-inline {
+			.right {
+				@include media-breakpoint-up(lg) {
+				    float: right;
+				}
+			}
+		}
 
 		//=========================================
 		// Stage Header h1

@@ -11,11 +11,25 @@
 //
 //-----------------------------------------------------------------
 
-.expertise-split li {
-	padding-top: 0;
-	padding-bottom: 0;
+.bg-fill-expertise:after {
+	@include media-breakpoint-down(sm) {
+		content: "";
+		position: absolute;
+		top: rem-calc(-30);
+		left: -100%;
+		right: 0;
+		bottom: 0;
+		width: 99999%;
+		height: calc(100% + 30px);
+		z-index: -1;
+		background: rgba(#1BB5C6, 0.8);
+	}
 }
 
+.expertise-stage-header-container {
+	position: relative;
+	z-index: 1;
+}
 //-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
