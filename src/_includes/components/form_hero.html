@@ -4,10 +4,10 @@
 
 <div class="card-contact">
 	<hr>
-	<ul class="block-grid-2-xs">
-		<li><i class="fa fa-phone"></i><a class="h5" href="tel:{{ settings.phone }}">{{ settings.phone }}</a></li>
-		<li><i class="fa fa-envelope"></i><a class="h5" href="mailto:{{ settings.email }}">{{ settings.email }}</a></li>
-	</ul>
+		<ul class="list-inline">
+			<li><i class="fa fa-phone"></i><a class="h5" href="tel:{{ settings.phone }}">{{ settings.phone }}</a></li>
+			<li><i class="fa fa-envelope"></i><a class="h5" href="mailto:{{ settings.email }}">{{ settings.email }}</a></li>
+		</ul>
 	<hr>
 </div>
 
@@ -17,15 +17,15 @@
 
 <form data-toggle="validator" class="callback-form">
 	<div class="row">
-		<div class="col-xs-5">
-			<!-- NAME -->
+		<!-- NAME -->
+		<div class="col-md-5">
 			<fieldset class="form-group">
 				<input class="form-control" id="name" type="text" placeholder="Name" required>
 				<small class="error">Your name is required.</small>
 			</fieldset>
 		</div>
-		<div class="col-xs-7 p-l-0">
-			<!-- PHONE -->
+		<!-- PHONE -->
+		<div class="col-md-7 p-l-0-md-up">
 			<fieldset class="form-group">
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Phone" required>

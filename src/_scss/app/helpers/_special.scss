@@ -33,6 +33,13 @@
 	}
 }
 
+// Used by Expertise item
+.p-l-0-md-up {
+	@include media-breakpoint-up(md) {
+	    padding-left: 0;
+	}
+}
+
 // not used anymore - keep for later
 .p-l-0-md-down {
 	@include media-breakpoint-down(md) {

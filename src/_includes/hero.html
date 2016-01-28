@@ -15,15 +15,11 @@
 
 <!-- HERO -->
 <div class="lv-hero has-auto-height hero-homepage">
-
     {% for hero in hero_images %}
-
         <!-- Hero Item -->
         <div class="lv-hero-item" style="background-image: url('{{ hero.image | prepend: site.assets }}')" data-background-image="{{ hero.image | prepend: site.assets }}">
-
             <div class="container">
                 <h2 class="hero-heading-serif m-b-md">North shore lawyers specialising in...</h2>
-
                 <ul class="title-btns block-grid-xs-1 block-grid-md-2">
                     {% for item in site.data.practices %}
                         <li>
@@ -31,9 +27,7 @@
                         </li>
                     {% endfor %}
                 </ul>
-
             </div>
         </div>
     {% endfor %}
-
 </div> <!-- .lv-hero -->

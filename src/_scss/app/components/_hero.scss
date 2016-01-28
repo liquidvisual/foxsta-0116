@@ -61,13 +61,24 @@
 //-----------------------------------------------------------------
 
 .hero-advanced {
+
+	hr {
+		border-color: #5EC8D5 !important; // fix later
+	}
+
+	.card-contact i {
+		// font-size: rem-calc(28);
+		width: auto;
+		margin-right: rem-calc(10);
+	}
+
 	.stage-header {
 		position: static;
-		padding: rem-calc(70 0 100 0);
+		padding: rem-calc(70 0 90 0);
 		margin: rem-calc(275 0 90 0);
 
 		.pad-left-lg {
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(xl) {
 			    padding-left: rem-calc(130);
 			}
 		}
@@ -78,6 +89,20 @@
 			}
 		}
 
+
+
+		//=========================================
+		// Stage Header h1
+		//=========================================
+
+		h1:not(.text) {
+			padding-top: 0;
+		}
+
+		//=========================================
+		// Icon
+		//=========================================
+
 		.header-icon {
 			.text {
 				padding: rem-calc(0 30 0 0);
@@ -86,18 +111,9 @@
 				    padding-right: rem-calc(120);
 				}
 			}
-			i {
-				font-size: rem-calc(62);
-			}
-		}
 
-		h1 {
-			padding-top: 0;
+			i { font-size: rem-calc(62); }
 		}
-	}
-
-	hr {
-		border-color: #5EC8D5 !important; // fix later
 	}
 }
 
