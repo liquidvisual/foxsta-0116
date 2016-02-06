@@ -80,7 +80,8 @@ button.btn i {
 	display: block;
 	min-height: rem-calc(80);
 	padding: rem-calc(0 15);
-	background: rgba(black, 0.65);
+	// background: rgba(black, 0.65);
+	background: rgba(0,94,125,.85);
 	font-family: $font-family-sans-serif;
 	color: white;
 
@@ -91,7 +92,8 @@ button.btn i {
 
 	&:hover {
 		@include media-breakpoint-up(xl) {
-		    background: rgba(black, 0.75);
+		    // background: rgba(black, 0.75);
+		    background: darken(rgba(0,94,125,0.85), 10%);
 		}
 	}
 
@@ -127,11 +129,26 @@ button.btn i {
 		bottom: 10px;
 		right: 20px;
 		font-size: rem-calc(25);
-		opacity: 0.3;
+		// opacity: 0.3;
+		color: white !important; // stop bootstrap hover override
 
 		@include media-breakpoint-up(md) {
 			bottom: 20px;
 		    font-size: rem-calc(40);
+		}
+	}
+}
+
+.btn-tile-reduced {
+	// background: rgba(black, 0.65);
+}
+
+.inverse .btn-tile {
+	background: rgba(0, 56, 74, .85);
+
+	&:hover {
+		@include media-breakpoint-up(xl) {
+		    background: rgba(0, 56, 74, 1);
 		}
 	}
 }

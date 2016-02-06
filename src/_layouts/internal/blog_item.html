@@ -5,19 +5,30 @@ layout: internal
 {% assign news = site.data.articles %}
 {% assign article = site.data.articles[0] %}
 
+{% capture image_link %}
+    <a href="/blog/blog-item/"><img class="media-object" width="130" src="/img/ui/placeholder.png" alt="Thumbnail"></a>
+    <span class="media-object-subtitle">By</span> <a href="/our-people/our-people-item/">David Gordon</a>
+{% endcapture %}
+
 <div class="container">
     <div class="row">
         <div class="col-lg-8 pad-right-lg">
-            <div class="media media-entry m-b-lg">
+            <div class="media media-entry">
             	<div class="media-left hidden-md-down p-r-md">
-            		<a href="/blog/blog-item/"><img class="media-object" width="130" src="/img/ui/placeholder.png" alt="Thumbnail"></a>
-            		<span class="media-object-subtitle">By</span> <a href="/our-people/our-people-item/">David Gordon</a>
+                    {{ image_link }}
             	</div>
             	<div class="media-body">
             		<h1 class="media-heading card-title h2">{{ article.title }}</h1>
             		<date>{{ article.date | date: "%d %B %Y" | upcase }}</date>
                     <span class="media-heading-subtitle">COMMERCIAL &amp; BUSINESS LAW</span>
             	</div>
+            </div>
+
+            <div class="spacer m-b-md hidden-lg-up"></div>
+            <div class="spacer m-b-lg hidden-md-down"></div>
+
+            <div class="hidden-lg-up m-b-lg">
+                {{ image_link }}
             </div>
 
             <img width="395" class="image-right" src="/img/ui/placeholder.png">

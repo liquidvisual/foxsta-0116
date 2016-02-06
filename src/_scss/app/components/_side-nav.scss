@@ -26,8 +26,10 @@
 
 	li {
 		padding: 0;
-		background: #026274;
-		border-top: 1px solid #116C7D;
+		// background: #026274;
+		background: #035671;
+		// border-top: 1px solid #116C7D;
+		border-top: 1px solid rgba(59, 144, 160, 0.3);
 	}
 
 	> li:first-child {
@@ -43,7 +45,8 @@
 	}
 
 	.active {
-		background: #004D5C;
+		// background: #004D5C;
+		background: darken(#035671, 5%);
 	}
 
 	a {

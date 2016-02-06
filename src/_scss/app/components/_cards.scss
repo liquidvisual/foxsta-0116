@@ -83,7 +83,7 @@
 	background: none;
 
 	.card-block {
-		background: #016273;
+		background: lighten($brand-secondary, 0%); //#016273;
 		overflow: hidden;
 
 		li {
@@ -117,12 +117,23 @@
 	}
 }
 
+.inverse .card-contact .card-block {
+	background: #035671;
+
+	hr {
+		border-color: rgba(59, 144, 160, 0.3);
+	}
+}
+
 //-----------------------------------------------------------------
 // CARD CONTACT MORE
 //-----------------------------------------------------------------
 
+// Only on PEOPLE ITEM pages
 // On PORTRAIT ONLY - allow all of card to be coloured
-.card-contact {
+.card-contact-bio {
+	background: red; //lighten($brand-secondary, 0%); //#016273;
+
 	@media #{$md-only} {
 		background: #016273;
 	}
@@ -130,7 +141,7 @@
 	img {
 		@media #{$md-only} {
 			width: auto;
-			height: rem-calc(190);
+			height: rem-calc(200);
 			float: left;
 		}
 	}
@@ -150,6 +161,10 @@
 		height: rem-calc(95);
 		overflow: hidden;
 
+		@include media-breakpoint-down(sm) {
+		    padding: rem-calc(14);
+		}
+
 		h1, h2, h3, h4, h5 {
 			font-family: $font-family-serif;
 			color: white;
@@ -164,6 +179,12 @@
 				display: block;
 				color: #A2A2A2;
 			}
+		}
+	}
+
+	.card-title {
+		@include media-breakpoint-down(sm) {
+		    font-size: 13px !important; //rem-calc(15) !important;
 		}
 	}
 
