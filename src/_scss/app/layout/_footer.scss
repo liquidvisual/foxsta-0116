@@ -22,7 +22,7 @@
 
 	.stamp {
 		@include media-breakpoint-down(sm) {
-			width: rem-calc(100);
+			width: rem-calc(84);
 		}
 	}
 }

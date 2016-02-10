@@ -29,7 +29,7 @@
 
 .inverse .block-list li {
 	border-top: 1px solid #258395;
-	border-bottom: 1px solid #258395;
+	border-bottom: 1px solid #258395; // must be hardcoded because lines overlap each other
 }
 
 // Special case (Expertise) when inverse and placed 2x2 grid

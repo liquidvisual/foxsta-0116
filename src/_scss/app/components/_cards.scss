@@ -117,11 +117,17 @@
 	}
 }
 
+//-----------------------------------------------------------------
+// INVERSE CONTACT CARD
+//-----------------------------------------------------------------
+
+// Used in free seminars etc
 .inverse .card-contact .card-block {
 	background: #035671;
 
 	hr {
-		border-color: rgba(59, 144, 160, 0.3);
+		// border-color: rgba(59, 144, 160, 0.3);
+		border-color: rgba(white, 0.1);
 	}
 }
 
@@ -132,10 +138,10 @@
 // Only on PEOPLE ITEM pages
 // On PORTRAIT ONLY - allow all of card to be coloured
 .card-contact-bio {
-	background: red; //lighten($brand-secondary, 0%); //#016273;
+	// background: red; //lighten($brand-secondary, 0%); //#016273;
 
 	@media #{$md-only} {
-		background: #016273;
+		background: #035671;
 	}
 
 	img {

@@ -140,6 +140,11 @@ a:not(.logo),
 	@include transition();
 }
 
+// targets homepage mostly and WYSIWYG inverse
+.inverse p > a:not(.btn, .seminar-list-heading a, .text-link) {
+	color: #6cbed8;
+}
+
 // consider: http://stackoverflow.com/questions/27878304/css-darken-on-hover-with-unknown-color
 // Use this instead of setting colors
 // a:hover {

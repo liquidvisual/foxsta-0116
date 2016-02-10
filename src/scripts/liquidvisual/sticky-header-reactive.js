@@ -25,7 +25,9 @@
 		wScrollBefore	= 0,
 		wScrollDiff		= 0;
 
-	$window.on( 'scroll', function()
+
+
+	function pollScrolling()
 	{
 		elHeight		= $element.outerHeight();
 		dHeight			= $document.height();
@@ -69,7 +71,10 @@
 		} else {
 			$body.removeClass('is-top');
 		}
+	}
 
-	});
+	$window.on('scroll', pollScrolling);
+
+	pollScrolling(); // init
 
 })( jQuery, window, document );
