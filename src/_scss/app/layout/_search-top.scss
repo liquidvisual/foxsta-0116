@@ -73,10 +73,43 @@
 }
 
 //-----------------------------------------------------------------
-//
+// Part of new Change Request 10.02.16
 //-----------------------------------------------------------------
 
+.phone-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+  	line-height: 34px;
+    background: #F3F3F3;
+    font-weight: bold;
+    z-index: 999999;
 
+    a {
+    	color: $body-color !important;
+    	font-size: rem-calc(16);
+    }
+
+    .fa {
+    	position: relative;
+    	top: 8px;
+    	width: 20px;
+    	height: 20px;
+    	line-height: 20px;
+    	color: white;
+    }
+
+    .phone-wrapper {
+    	position: absolute;
+    	right: rem-calc(15);
+
+    	@include media-breakpoint-down(sm) {
+    	    right: rem-calc(20);
+    	}
+    }
+}
 
 //=========================================
 //

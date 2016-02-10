@@ -41,6 +41,15 @@ $header-height-lg: 180px !default;
 		// box-shadow: none;
 		background: white;
 	}
+
+	.phone-top {
+		// @include transition();
+
+		@include media-breakpoint-down(lg) {
+			display: none;
+			// margin-top: -36px;
+		}
+	}
 }
 
 //-----------------------------------------------------------------
@@ -69,25 +78,41 @@ $header-height-lg: 180px !default;
 	}
 }
 
-// .scrolling-up .global-header {
-// 	position: fixed;
-// 	height: rem-calc(120);
+//-----------------------------------------------------------------
+// Is Top State - show phone on mobile
+//-----------------------------------------------------------------
 
-// 	@include media-breakpoint-up(xl) {
-// 		.global-navigation {
-// 			top: rem-calc(-38);
-// 		}
-// 	    .search-top {
-// 	    	opacity: 0;
-// 	    }
-// 	    .logo {
-// 	    	top: rem-calc(20);
-// 		}
-// 		.logo img {
-// 			width: rem-calc(160);
-// 		}
-// 	}
-// }
+.is-top .global-header {
+
+	// Going down - lg first
+	@include media-breakpoint-down(lg) {
+	    height: $header-height-md + $phone-bar-height;
+	}
+
+	// Going down - sm last
+	@include media-breakpoint-down(sm) {
+	    height: $header-height-sm + $phone-bar-height;
+	}
+
+	.phone-top {
+    	@include media-breakpoint-down(lg) {
+    		display: block;
+    		// margin-top: 0;
+    	}
+    }
+
+    .logo {
+		@include media-breakpoint-down(lg) {
+		    top: 20px + $phone-bar-height;
+		}
+    }
+
+    .global-mobile-menu {
+    	@include media-breakpoint-down(lg) {
+    	    top: calc(50% + #{$phone-bar-height});
+    	}
+    }
+}
 
 //-----------------------------------------------------------------
 // Logo
@@ -132,7 +157,6 @@ $header-height-lg: 180px !default;
 	top: 50%;
 	display: block;
 	overflow: hidden;
-	// background: red;
 
 	.hamburger {
 		display: block;
@@ -142,6 +166,30 @@ $header-height-lg: 180px !default;
 		cursor: pointer;
 	}
 }
+
+//-----------------------------------------------------------------
+// Keep for reference - previous attempt
+//-----------------------------------------------------------------
+
+// .scrolling-up .global-header {
+// 	position: fixed;
+// 	height: rem-calc(120);
+
+// 	@include media-breakpoint-up(xl) {
+// 		.global-navigation {
+// 			top: rem-calc(-38);
+// 		}
+// 	    .search-top {
+// 	    	opacity: 0;
+// 	    }
+// 	    .logo {
+// 	    	top: rem-calc(20);
+// 		}
+// 		.logo img {
+// 			width: rem-calc(160);
+// 		}
+// 	}
+// }
 
 //=========================================
 //

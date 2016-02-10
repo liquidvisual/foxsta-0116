@@ -28,6 +28,18 @@
 }
 
 //-----------------------------------------------------------------
+
+.is-top .lv-page {
+	@include media-breakpoint-down(lg) {
+	    padding-top: $header-height-md + $phone-bar-height; // MD
+	}
+
+	@include media-breakpoint-down(sm) {
+	    padding-top: $header-height-sm + $phone-bar-height;
+	}
+}
+
+//-----------------------------------------------------------------
 // Responsive Typography
 //-----------------------------------------------------------------
 

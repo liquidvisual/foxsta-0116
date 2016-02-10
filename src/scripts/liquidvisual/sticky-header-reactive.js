@@ -19,6 +19,7 @@
 		$document		= $( document ),
 		dHeight			= 0,
 		$window			= $( window ),
+		$body           = $('body'),
 		wHeight			= 0,
 		wScrollCurrent	= 0,
 		wScrollBefore	= 0,
@@ -62,6 +63,13 @@
 		} else {
 			$element.removeClass('is-compact')
 		}
+
+		if (wScrollCurrent <= 0) {
+			$body.addClass('is-top');
+		} else {
+			$body.removeClass('is-top');
+		}
+
 	});
 
 })( jQuery, window, document );
