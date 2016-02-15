@@ -93,3 +93,84 @@
 	// width: calc(100% + 375em);
 }
 
+//-----------------------------------------------------------------
+// Jono Additions - 15.01.16
+//-----------------------------------------------------------------
+
+/* modify container to be a bit wider on max-width, and to also fill the viewport horizontally on all widths below 1430px (so remove the smaller max-widths on the other break points), and change the padding for 768px wide and above, and decrease the side padding for mobile */
+
+.container {
+	max-width: 1430px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+@media screen and (min-width: 767px) {
+	.container {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+//=========================================
+// some specific CSS for AJAX form submission
+//=========================================
+
+ .contact-outer {
+ 	position: relative;
+ }
+
+ #contact-form-ajax-loading {
+ 	display: none;
+ 	z-index: 5;
+ 	background-color: rgba(1, 111, 130, 0.82);
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	bottom: 0;
+ 	width: 100%;
+ 	height: 100%;
+ }
+
+ #contact-form-ajax-loading .fa {
+ 	color: rgba(255,255,255,0.7);
+ 	position: absolute;
+ 	font-size: 80px;
+ 	left: 50%;
+ 	top: 50%;
+ 	margin-left: -40px;
+ 	margin-top: -50px;
+ }
+
+ //=========================================
+ // Form Alert
+ //=========================================
+
+.alert {
+	padding: 20px; background-color: #333;
+	color: #fff;
+	border:none;
+}
+
+.alert-success {
+	background-color: #3fd377;
+}
+
+ .alert-error {
+ 	background-color: #e66060;
+ }
+
+ .contact-page .contact-page-full-width {
+ 	width: 100% !important;
+ }
+  .contact-page .alert {
+  	font-size: 100%;
+  }
+
+//=========================================
+// Commas being added by the back-end, hide leading comma
+//=========================================
+
+.media-heading-subtitle span:first-of-type {
+	display: none;
+}
