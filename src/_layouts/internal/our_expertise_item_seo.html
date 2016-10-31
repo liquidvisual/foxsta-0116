@@ -1,0 +1,94 @@
+---
+layout: internal_hero_advanced_seo
+---
+
+{% assign team_group = site.data.team[4]  %}
+
+<section class="section brand-secondary">
+	<div class="container expertise-stage-header-container">
+		<div class="row">
+			<div class="col-md-6 pad-right-md">
+				<h3>To choose the best strategies for you, think <br>about these:</h3>
+				<p>Have you set things up so that your wealth can be managed if you have an accident, have a stroke or get dementia?</p>
+				<p>Have you set things up so that someone you trust can manage your healthcare and lifestyle if you are unable to manage your own affairs?</p>
+				<p>Have you got documents in place that allow your family to preserve your assets after you die?</p>
+				<p>Are you leaving things so that your family and future generations can avoid paying large amount of tax more than necessary?</p>
+				<p>Are you leaving things so that your wealth leave behind will not be lost by your children and future generations if they go through a divorce?</p>
+				<p>Are you leaving things set up so that the wealth you leave behind will not fall into the hands of family members who have no money management skills?</p>
+				<p>Will you be leaving things so that the wealth you have accumulated during your lifetime will not be lost to your children's creditors if they hold a directorship in a company that goes bad or strike other financial misfortune?</p>
+				<p>Do you need to leave things so that your wealth will 'skip a generation" or otherwise be kept out of the clutches of your children's spouses or partners?</p>
+				<a href="#our-commercial-and-business-law-services" class="btn btn-block btn-scroll btn-text btn-primary">Explore our commercial &amp; business law service &amp; team <i class="fa fa-angle-down"></i></a>
+
+				<div class="spacer p-b-md hidden-lg-up"></div>
+			</div>
+			<div class="col-md-6 pad-left-md">
+				<div class="hero-advanced">
+					<div class="stage-header special">
+						{% include components/form_hero.html %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+	<div class="container">
+		<h2 id="our-commercial-and-business-law-services" class="header-icon m-b-md"><i class="fa fa-files-o"></i><span class="text">Our commercial &amp; business law services</span></h2>
+		<br>
+
+		<ul class="title-btns block-grid-xs-1 block-grid-md-2 block-grid-lg-3">
+		    {% for item in site.data.practices limit: 8 %}
+		        <li>
+		            {% include components/btn_tile_reduced.html title=item.title url=item.url class="h3" %}
+		        </li>
+		    {% endfor %}
+		</ul>
+	</div>
+</section>
+
+<!-- TEAM -->
+<section class="section brand-secondary">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9">
+				<h2 class="header-icon m-b-md"><i class="fa fa-users"></i> <span class="text">{{ team_group.title }}</span></h2>
+				<br>
+				<ul class="cards-list title-btns block-grid-xs-2 block-grid-md-4">
+				    {% for person in team_group.children | limit: 4 %}
+				        <li>
+				        	<a href="/our-people/our-people-item/" class="card-anchor">
+								{% include components/card_bio.html title=person.title subtitle=person.subtitle %}
+							</a>
+				        </li>
+				    {% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- RECENT BLOGS -->
+<section class="section brand-primary inverse">
+	<div class="container">
+		<h2 class="header-icon m-b-md"><i class="fa fa-newspaper-o"></i> <span class="text">Recent Blogs - Commercial &amp; Business Law</span></h2>
+
+		<!-- ENTRIES SPLIT INTO 2 COLUMNS -->
+		<div class="row">
+			{% for i in (1..2) %}
+				<div class="col-lg-6 pad-right-lg">
+					<ul class="block-list block-grid-xs-1">
+						{% for item in site.data.articles limit: 2 %}
+							<li>
+								{% include components/media_entry.html %}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endfor %}
+		</div>
+		<br>
+		<p class="text-right m-b-0"><a href="#" class="btn btn-primary btn-text">Read more blogs <i class="fa fa-angle-right"></i></a></p>
+	</div>
+</section>
